@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fundación Patagonia Fiel · v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site-v2.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="site-v2.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS_V2 = /*EDITMODE-BEGIN*/{
+  "accent": "#c9a14a",
+  "displayFont": "'Cormorant Garamond', Georgia, serif",
+  "bodyFont": "'Manrope', system-ui, sans-serif",
+  "density": 1
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS_V2);
+  return (
+    <>
+      <SiteV2 tweaks={tweaks} />
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Identidad" />
+        <TweakColor label="Acento" value={tweaks.accent}
+          onChange={(v) => setTweak('accent', v)} />
+
+        <TweakSection label="Tipografía" />
+        <TweakRadio label="Display"
+          value={tweaks.displayFont}
+          options={[
+            { value: "'Cormorant Garamond', Georgia, serif", label: "Cormorant" },
+            { value: "'Fraunces', Georgia, serif", label: "Fraunces" },
+            { value: "'Inter Tight', system-ui, sans-serif", label: "Inter T." },
+          ]}
+          onChange={(v) => setTweak('displayFont', v)} />
+        <TweakRadio label="Cuerpo"
+          value={tweaks.bodyFont}
+          options={[
+            { value: "'Manrope', system-ui, sans-serif", label: "Manrope" },
+            { value: "'Inter Tight', system-ui, sans-serif", label: "Inter Tight" },
+          ]}
+          onChange={(v) => setTweak('bodyFont', v)} />
+
+        <TweakSection label="Densidad" />
+        <TweakSlider label="Espaciado"
+          min={0.85} max={1.15} step={0.05}
+          value={tweaks.density}
+          onChange={(v) => setTweak('density', v)} />
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

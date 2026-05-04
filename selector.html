@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fundación Patagonia Fiel · Elegir propuesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --accent: #c9a14a;
+    --navy: #14365b;
+    --navy-deep: #0e2541;
+    --paper: #faf6ee;
+    --paper-warm: #f3ebd9;
+    --ink: #1a1d1f;
+    --ink-soft: #4a4f54;
+    --ink-mute: #7a7f84;
+    --line: rgba(26, 29, 31, 0.12);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 48px clamp(20px, 5vw, 88px) 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .header__logo {
+    width: 52px; height: 52px;
+    object-fit: contain;
+  }
+  .header__text { display: flex; flex-direction: column; line-height: 1; }
+  .header__small {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+  .header__big {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--navy-deep);
+  }
+
+  /* ── HERO COPY ── */
+  .intro {
+    padding: 56px clamp(20px, 5vw, 88px) 48px;
+    max-width: 760px;
+  }
+  .intro__label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .intro__title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.012em;
+    color: var(--navy-deep);
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
+  .intro__title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .intro__sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 520px;
+  }
+
+  /* ── CARDS GRID ── */
+  .cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line);
+    margin-top: auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-right: 1px solid var(--line);
+    transition: background .2s;
+    overflow: hidden;
+    position: relative;
+  }
+  .card:last-child { border-right: none; }
+  .card:hover { background: var(--paper-warm); }
+
+  /* preview iframe */
+  .card__preview {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--line);
+  }
+  .card__preview iframe {
+    width: 1440px;
+    height: 900px;
+    border: none;
+    transform: scale(0.31);
+    transform-origin: top left;
+    pointer-events: none;
+  }
+  .card__preview-overlay {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+  .card__badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--paper);
+    color: var(--navy);
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+
+  /* card body */
+  .card__body {
+    padding: 36px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+  .card__num {
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 0.9;
+    margin-bottom: 4px;
+  }
+  .card__title {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 2.4vw, 32px);
+    font-weight: 600;
+    color: var(--navy-deep);
+    line-height: 1.1;
+  }
+  .card__desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 400px;
+  }
+  .card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .card__tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    background: var(--paper-warm);
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .card:hover .card__tag { background: var(--paper); }
+
+  .card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--navy);
+    border-top: 1px solid var(--line);
+    letter-spacing: 0.01em;
+    transition: gap .2s;
+  }
+  .card:hover .card__cta { gap: 14px; color: var(--navy-deep); }
+
+  /* ── CANVAS LINK ── */
+  .canvas-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px clamp(20px, 5vw, 88px);
+    border-top: 1px solid var(--line);
+    background: var(--paper-warm);
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .canvas-bar a {
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .canvas-bar a:hover { text-decoration: underline; }
+  .canvas-bar__sep {
+    width: 1px; height: 14px;
+    background: var(--line);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 760px) {
+    .cards { grid-template-columns: 1fr; }
+    .card { border-right: none; border-bottom: 1px solid var(--line); }
+    .card:last-child { border-bottom: none; }
+    .card__preview { height: 200px; }
+    .card__preview iframe {
+      transform: scale(0.19);
+      transform-origin: top left;
+    }
+    .card__body { padding: 28px 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <img src="assets/logo-color.png" alt="" class="header__logo" />
+  <div class="header__text">
+    <span class="header__small">Fundación</span>
+    <span class="header__big">Patagonia Fiel</span>
+  </div>
+</header>
+
+<div class="intro">
+  <span class="intro__label">Propuestas de diseño</span>
+  <h1 class="intro__title">Elegí la propuesta<br/><em>que mejor te representa.</em></h1>
+  <p class="intro__sub">Dos versiones del sitio institucional. Hacé click en cualquiera para explorarla en detalle.</p>
+</div>
+
+<div class="cards">
+
+  <a class="card" href="index.html">
+    <div class="card__preview">
+      <iframe src="index.html" loading="lazy" tabindex="-1"></iframe>
+      <div class="card__preview-overlay"></div>
+      <span class="card__badge">Propuesta 1</span>
+    </div>
+    <div class="card__body">
+      <div class="card__num">01</div>
+      <div class="card__title">Editorial cálida</div>
+      <p class="card__desc">
+        Hero con animación sutil de horizonte — olas, mesa costera y un ave que cruza.
+        Paleta crema y azul profundo. Tipografía editorial con Cormorant Garamond.
+      </p>
+      <div class="card__tags">
+        <span class="card__tag">Animación SVG</span>
+        <span class="card__tag">Editorial</span>
+        <span class="card__tag">Panel Tweaks</span>
+      </div>
+      <span class="card__cta">Ver propuesta 1 →</span>
+    </div>
+  </a>
+
+  <a class="card" href="index-v2.html">
+    <div class="card__preview">
+      <iframe src="index-v2.html" loading="lazy" tabindex="-1"></iframe>
+      <div class="card__preview-overlay"></div>
+      <span class="card__badge">Propuesta 2</span>
+    </div>
+    <div class="card__body">
+      <div class="card__num">02</div>
+      <div class="card__title">Fotos reales · Inmersiva</div>
+      <p class="card__desc">
+        Hero a pantalla completa con foto de Patagonia. Nav transparente que se
+        solidifica al hacer scroll. Secciones con fotos intercaladas de la costa,
+        fauna y comunidad.
+      </p>
+      <div class="card__tags">
+        <span class="card__tag">Fotos Patagonia</span>
+        <span class="card__tag">Full-bleed</span>
+        <span class="card__tag">Inmersiva</span>
+      </div>
+      <span class="card__cta">Ver propuesta 2 →</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="canvas-bar">
+  <span>¿Querés ver ambas lado a lado?</span>
+  <div class="canvas-bar__sep"></div>
+  <a href="canvas.html">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="1" width="5" height="12" rx="1"/><rect x="8" y="1" width="5" height="12" rx="1"/></svg>
+    Abrir canvas de diseño
+  </a>
+</div>
+
+</body>
+</html>

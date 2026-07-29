@@ -76,7 +76,7 @@ function V2Nav() {
   return (
     <nav className={"v2-nav" + (scrolled ? " v2-nav--scrolled" : "")}>
       <a className="v2-nav__brand" href="#top">
-        <img src="assets/logo-color.png" alt="" />
+        <img src="assets/logo-nuevo.png" alt="" />
         <span>
           <small>Fundación</small>
           <b>Patagonia Fiel</b>
@@ -416,7 +416,7 @@ function V2Footer() {
       <div className="v2-footer__veil" />
       <div className="v2-footer__inner">
         <div className="v2-footer__brand">
-          <img src="assets/logo-color.png" alt="" />
+          <img src="assets/logo-nuevo.png" alt="" />
           <div>
             <small>Fundación</small>
             <b>Patagonia Fiel</b>

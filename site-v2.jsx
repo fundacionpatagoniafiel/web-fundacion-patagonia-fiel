@@ -2,7 +2,7 @@
 const { useState, useEffect, useRef } = React;
 
 const PHOTOS = {
-  hero: "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=2400&q=80&auto=format&fit=crop",
+  hero: "assets/hero-san-antonio-oeste.jpg",
   // Coastal Patagonia / sea
   coast1: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80&auto=format&fit=crop",
   coast2: "https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=1600&q=80&auto=format&fit=crop",
@@ -41,7 +41,7 @@ function PhotoHero() {
       <div className="v2-hero__inner">
         <div className="v2-hero__eyebrow">
           <span className="v2-hero__dot" />
-          San Antonio Oeste · Río Negro · Patagonia
+          San Antonio Oeste · Río Negro · Patagonia Argentina
         </div>
         <h1 className="v2-hero__title">
           Cuidar el lugar<br/>

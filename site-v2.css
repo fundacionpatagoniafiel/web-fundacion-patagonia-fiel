@@ -220,6 +220,20 @@
   position: relative;
 }
 .v2-section--manifiesto { padding-top: calc(140px * var(--density)); }
+
+/* ── SCROLL REVEAL ── */
+.v2-reveal {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+.v2-reveal--left { transform: translateX(-90px); }
+.v2-reveal--right { transform: translateX(90px); }
+.v2-reveal--visible { opacity: 1; transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) {
+  .v2-reveal { opacity: 1; transform: none; transition: none; }
+}
 .v2-section--programa { padding: 0 0 calc(120px * var(--density)); }
 .v2-section--plan { background: var(--paper-warm); }
 .v2-section--colab { padding: 0; }

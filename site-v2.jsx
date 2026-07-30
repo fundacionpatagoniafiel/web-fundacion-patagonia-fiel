@@ -96,6 +96,31 @@ function V2Nav() {
   );
 }
 
+// Reveals an element by sliding it in from off-screen the first time it
+// scrolls into view; stays in place afterwards (no re-hide on scroll back).
+function useReveal() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, []);
+  return [ref, visible];
+}
+
 // Quote between sections, full-bleed photo
 function PhotoQuote({ src, quote, source, align = "left" }) {
   return (
@@ -114,15 +139,23 @@ function PhotoQuote({ src, quote, source, align = "left" }) {
 }
 
 function Manifiesto() {
+  const [photosRef, photosVisible] = useReveal();
+  const [copyRef, copyVisible] = useReveal();
   return (
     <section className="v2-section v2-section--manifiesto" id="manifiesto">
       <div className="v2-grid v2-grid--manifiesto">
-        <div className="v2-mani__photos">
+        <div
+          ref={photosRef}
+          className={"v2-mani__photos v2-reveal v2-reveal--left" + (photosVisible ? " v2-reveal--visible" : "")}
+        >
           <img src={PHOTOS.coast1} alt="Costa de la Bahía San Antonio" className="v2-mani__photo v2-mani__photo--1" />
           <img src={PHOTOS.bird} alt="Aves costeras" className="v2-mani__photo v2-mani__photo--2" />
           <img src={PHOTOS.tide} alt="Marea baja" className="v2-mani__photo v2-mani__photo--3" />
         </div>
-        <div className="v2-mani__copy">
+        <div
+          ref={copyRef}
+          className={"v2-mani__copy v2-reveal v2-reveal--right" + (copyVisible ? " v2-reveal--visible" : "")}
+        >
           <span className="v2-label">Manifiesto</span>
           <h2 className="v2-h2">
             La Patagonia no se hereda: <em>se cuida.</em>

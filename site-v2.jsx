@@ -11,7 +11,6 @@ const PHOTOS = {
   steppe: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80&auto=format&fit=crop",
   // Wildlife
   bird: "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=1600&q=80&auto=format&fit=crop",
-  seal: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1600&q=80&auto=format&fit=crop",
   // Education / community
   classroom: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=80&auto=format&fit=crop",
   workshop: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80&auto=format&fit=crop",
@@ -95,7 +94,14 @@ function V2Nav() {
       </button>
       <ul className={"v2-nav__links" + (open ? " v2-nav__links--open" : "")}>
         <li><a href="#top" onClick={() => setOpen(false)}>Inicio</a></li>
-        <li><a href="#quienes" onClick={() => setOpen(false)}>Quiénes somos</a></li>
+        <li className="v2-nav__item--dropdown">
+          <a href="#quienes" onClick={() => setOpen(false)}>Quiénes somos</a>
+          <ul className="v2-nav__submenu">
+            <li><a href="#proposito" onClick={() => setOpen(false)}>Propósito</a></li>
+            <li><a href="#manifiesto" onClick={() => setOpen(false)}>Ubicación</a></li>
+            <li><a href="#equipo" onClick={() => setOpen(false)}>Equipo</a></li>
+          </ul>
+        </li>
         <li><a href="#programa" onClick={() => setOpen(false)}>Proyectos</a></li>
         <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
@@ -130,9 +136,9 @@ function useReveal() {
 }
 
 // Quote between sections, full-bleed photo
-function PhotoQuote({ src, quote, source, align = "left" }) {
+function PhotoQuote({ src, quote, source, align = "left", id }) {
   return (
-    <section className={"v2-quote v2-quote--" + align}>
+    <section id={id} className={"v2-quote v2-quote--" + align}>
       <img src={src} alt="" className="v2-quote__img" />
       <div className="v2-quote__veil" />
       <div className="v2-quote__inner">
@@ -217,7 +223,7 @@ function Quienes() {
         </h2>
       </div>
 
-      <div className="v2-fines-wrap">
+      <div className="v2-fines-wrap" id="proposito">
         <div className="v2-fines">
           <div className="v2-fines__head">Nuestros fines</div>
           <ol className="v2-fines__list">
@@ -232,7 +238,7 @@ function Quienes() {
         <img className="v2-fines__photo" src={PHOTOS.steppe} alt="Estepa patagónica" />
       </div>
 
-      <div className="v2-team">
+      <div className="v2-team" id="equipo">
         <div className="v2-team__head">
           <span className="v2-label">Consejo de Administración</span>
           <h3 className="v2-h3">Las personas detrás del proyecto.</h3>
@@ -489,10 +495,6 @@ function SiteV2({ tweaks }) {
       <V2Nav />
       <PhotoHero />
       <Manifiesto />
-      <PhotoQuote
-        src={PHOTOS.seal}
-        quote="La Bahía San Antonio es uno de los ecosistemas costeros más relevantes del Golfo San Matías, refugio de aves migratorias y fauna marina única."
-      />
       <Quienes />
       <Programa />
       <PhotoQuote

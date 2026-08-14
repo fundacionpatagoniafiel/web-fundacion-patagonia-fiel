@@ -416,7 +416,6 @@
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: calc(72px * var(--density));
-  margin-bottom: calc(120px * var(--density));
   align-items: stretch;
 }
 .v2-fines {

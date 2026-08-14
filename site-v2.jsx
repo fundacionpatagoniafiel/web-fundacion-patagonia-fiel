@@ -207,13 +207,6 @@ function Quienes() {
     "Cooperar con instituciones científicas y de la sociedad civil.",
   ];
 
-  const team = [
-    { name: "Maximiliano Bertini", role: "Presidente", img: PHOTOS.p1 },
-    { name: "Dennis N. Landete", role: "Secretario", img: PHOTOS.p2 },
-    { name: "Juan Francisco Saad", role: "Tesorero · Dr. en Cs. Biológicas", img: PHOTOS.p3 },
-    { name: "María Libertad Chibli", role: "Vocal Titular", img: PHOTOS.p4 },
-  ];
-
   return (
     <section className="v2-section" id="quienes">
       <div className="v2-section__head">
@@ -237,8 +230,21 @@ function Quienes() {
         </div>
         <img className="v2-fines__photo" src={PHOTOS.steppe} alt="Estepa patagónica" />
       </div>
+    </section>
+  );
+}
 
-      <div className="v2-team" id="equipo">
+function Equipo() {
+  const team = [
+    { name: "Maximiliano Bertini", role: "Presidente", img: PHOTOS.p1 },
+    { name: "Dennis N. Landete", role: "Secretario", img: PHOTOS.p2 },
+    { name: "Juan Francisco Saad", role: "Tesorero · Dr. en Cs. Biológicas", img: PHOTOS.p3 },
+    { name: "María Libertad Chibli", role: "Vocal Titular", img: PHOTOS.p4 },
+  ];
+
+  return (
+    <section className="v2-section" id="equipo">
+      <div className="v2-team">
         <div className="v2-team__head">
           <span className="v2-label">Consejo de Administración</span>
           <h3 className="v2-h3">Las personas detrás del proyecto.</h3>
@@ -494,8 +500,9 @@ function SiteV2({ tweaks }) {
     <div className="v2-site" id="top" style={styleVars}>
       <V2Nav />
       <PhotoHero />
-      <Manifiesto />
       <Quienes />
+      <Manifiesto />
+      <Equipo />
       <Programa />
       <PhotoQuote
         src={PHOTOS.steppe}

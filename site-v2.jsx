@@ -104,6 +104,7 @@ function V2Nav() {
         </li>
         <li><a href="#programa" onClick={() => setOpen(false)}>Proyectos</a></li>
         <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>
+        <li><a href="#galeria" onClick={() => setOpen(false)}>Galería</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
       </ul>
     </nav>
@@ -441,6 +442,50 @@ function Colaborar() {
   );
 }
 
+function Galeria() {
+  const photos = [
+    { src: PHOTOS.coast1, alt: "Costa de la Bahía San Antonio" },
+    { src: PHOTOS.bird, alt: "Aves costeras" },
+    { src: PHOTOS.rocks, alt: "Rocas costeras" },
+    { src: PHOTOS.research, alt: "Trabajo de campo" },
+    { src: PHOTOS.hands, alt: "Compromiso comunitario" },
+    { src: PHOTOS.classroom, alt: "Charla en el aula" },
+  ];
+  const [index, setIndex] = useState(0);
+  const prev = () => setIndex((i) => (i - 1 + photos.length) % photos.length);
+  const next = () => setIndex((i) => (i + 1) % photos.length);
+
+  return (
+    <section className="v2-section" id="galeria">
+      <div className="v2-section__head">
+        <span className="v2-label">Galería</span>
+        <h2 className="v2-h2">Momentos <em>en el territorio.</em></h2>
+      </div>
+      <div className="v2-gallery">
+        <button className="v2-gallery__arrow v2-gallery__arrow--prev" onClick={prev} aria-label="Foto anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
+        <div className="v2-gallery__frame">
+          <img src={photos[index].src} alt={photos[index].alt} className="v2-gallery__img" />
+        </div>
+        <button className="v2-gallery__arrow v2-gallery__arrow--next" onClick={next} aria-label="Foto siguiente">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
+      </div>
+      <div className="v2-gallery__dots">
+        {photos.map((_, i) => (
+          <button
+            key={i}
+            className={"v2-gallery__dot" + (i === index ? " v2-gallery__dot--active" : "")}
+            onClick={() => setIndex(i)}
+            aria-label={`Ir a la foto ${i + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Contacto() {
   return (
     <section className="v2-section v2-section--contact" id="contacto">
@@ -520,6 +565,7 @@ function SiteV2({ tweaks }) {
       />
       <Plan />
       <Colaborar />
+      <Galeria />
       <Contacto />
       <V2Footer />
     </div>

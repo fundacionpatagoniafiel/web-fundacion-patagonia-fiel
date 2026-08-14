@@ -94,10 +94,10 @@ function V2Nav() {
         <span/><span/><span/>
       </button>
       <ul className={"v2-nav__links" + (open ? " v2-nav__links--open" : "")}>
-        <li><a href="#manifiesto" onClick={() => setOpen(false)}>Manifiesto</a></li>
+        <li><a href="#top" onClick={() => setOpen(false)}>Inicio</a></li>
         <li><a href="#quienes" onClick={() => setOpen(false)}>Quiénes somos</a></li>
-        <li><a href="#programa" onClick={() => setOpen(false)}>Programa</a></li>
-        <li><a href="#plan" onClick={() => setOpen(false)}>Plan trienal</a></li>
+        <li><a href="#programa" onClick={() => setOpen(false)}>Proyectos</a></li>
+        <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
       </ul>
     </nav>

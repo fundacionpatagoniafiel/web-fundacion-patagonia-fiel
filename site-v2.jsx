@@ -320,10 +320,30 @@ function Quienes() {
 
 function Equipo() {
   const team = [
-    { name: "Maximiliano Bertini", role: "Presidente", img: PHOTOS.p1 },
-    { name: "Dennis N. Landete", role: "Secretario", img: PHOTOS.p2 },
-    { name: "Juan Francisco Saad", role: "Tesorero · Dr. en Cs. Biológicas", img: PHOTOS.p3 },
-    { name: "María Libertad Chibli", role: "Vocal Titular", img: PHOTOS.p4 },
+    {
+      name: "Maximiliano Bertini",
+      role: "Presidente",
+      img: PHOTOS.p1,
+      bio: "Preside la Fundación Patagonia Fiel y lidera su vínculo con la comunidad de San Antonio Oeste.",
+    },
+    {
+      name: "Dennis N. Landete",
+      role: "Secretario",
+      img: PHOTOS.p2,
+      bio: "Secretario de la Fundación y Licenciado en Biología Marina, aporta su mirada científica sobre el ecosistema costero.",
+    },
+    {
+      name: "Juan Francisco Saad",
+      role: "Tesorero · Dr. en Cs. Biológicas",
+      img: PHOTOS.p3,
+      bio: "Tesorero de la Fundación y responsable del programa educativo Bahía San Antonio bajo la lupa.",
+    },
+    {
+      name: "María Libertad Chibli",
+      role: "Vocal Titular",
+      img: PHOTOS.p4,
+      bio: "Vocal Titular del Consejo de Administración de la Fundación Patagonia Fiel.",
+    },
   ];
 
   return (
@@ -337,7 +357,14 @@ function Equipo() {
           {team.map((p) => (
             <figure key={p.name} className="v2-team__card">
               <div className="v2-team__photo">
-                <img src={p.img} alt={p.name} />
+                <div className="v2-team__flip">
+                  <div className="v2-team__face v2-team__face--front">
+                    <img src={p.img} alt={p.name} />
+                  </div>
+                  <div className="v2-team__face v2-team__face--back">
+                    <p>{p.bio}</p>
+                  </div>
+                </div>
               </div>
               <figcaption>
                 <b>{p.name}</b>

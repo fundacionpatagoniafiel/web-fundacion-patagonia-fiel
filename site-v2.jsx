@@ -29,6 +29,74 @@ const PHOTOS = {
   p4: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop&crop=faces",
 };
 
+const PROYECTOS = [
+  {
+    slug: "proyecto-charlas",
+    title: "Charlas-taller",
+    img: PHOTOS.classroom,
+    alt: "Charla en el aula",
+    short: "Encuentros presenciales de 40 minutos con contenido científico accesible y participación activa de los estudiantes.",
+    full: "Encuentros presenciales de 40 minutos pensados para acercar el ecosistema costero a estudiantes de nivel medio con un lenguaje claro y dinámicas participativas. Cada charla combina contenido científico con espacio para preguntas, buscando que los estudiantes se lleven una comprensión concreta de su entorno.",
+    bullets: [
+      "Contenido adaptado a estudiantes de nivel medio.",
+      "Participación activa: preguntas y debate guiado.",
+      "Se dicta en escuelas de la zona de San Antonio Oeste.",
+    ],
+  },
+  {
+    slug: "proyecto-biodiversidad",
+    title: "Biodiversidad",
+    img: PHOTOS.bird,
+    alt: "Avifauna",
+    short: "Reconocer las características ecológicas de la bahía y comprender su importancia regional desde la mirada científica.",
+    full: "Un recorrido por las especies que habitan la Bahía San Antonio — aves migratorias, fauna marina y la trama que las conecta — para que los estudiantes entiendan por qué este ecosistema fue declarado Área Natural Protegida.",
+    bullets: [
+      "Reconocimiento de especies clave de la bahía.",
+      "Por qué el área está protegida desde 1993.",
+      "Vínculo entre biodiversidad y calidad de vida local.",
+    ],
+  },
+  {
+    slug: "proyecto-mareas",
+    title: "Mareas e impacto",
+    img: PHOTOS.tide,
+    alt: "Marea baja",
+    short: "Comprender la dinámica de mareas más amplia del Atlántico y los impactos de las actividades humanas en el ecosistema.",
+    full: "La Bahía San Antonio tiene una de las mareas más amplias del Atlántico Sur. Este eje explica esa dinámica y analiza junto a los estudiantes cómo las actividades humanas impactan en un ecosistema que depende de ese ritmo natural.",
+    bullets: [
+      "Explicación de la dinámica de mareas de la bahía.",
+      "Análisis de impactos humanos sobre la costa.",
+      "Convivencia sostenible con el ecosistema.",
+    ],
+  },
+  {
+    slug: "proyecto-pensamiento",
+    title: "Pensamiento crítico",
+    img: PHOTOS.hands,
+    alt: "Compromiso comunitario",
+    short: "Fomentar la capacidad de cuestionar y proponer soluciones desde una ciudadanía ambientalmente comprometida.",
+    full: "Más allá del contenido científico, buscamos que cada estudiante termine el programa con herramientas para cuestionar y proponer: identificar problemas ambientales de su entorno y pensar posibles soluciones desde una ciudadanía comprometida.",
+    bullets: [
+      "Análisis de problemas ambientales locales.",
+      "Espacio para propuestas de los propios estudiantes.",
+      "Cierre del programa con una instancia reflexiva grupal.",
+    ],
+  },
+  {
+    slug: "proyecto-observatorio",
+    title: "Observatorio Oceanográfico",
+    img: PHOTOS.research,
+    alt: "Trabajo de campo",
+    short: "Mediciones sistemáticas de calidad de agua y observación de fauna costera en articulación con instituciones científicas.",
+    full: "Mediciones sistemáticas de calidad de agua en zonas costeras clave, en articulación con instituciones académicas y organismos públicos y privados, sumado a observación de aves costeras y marinas a través de ciencia ciudadana.",
+    bullets: [
+      "Mediciones sistemáticas de calidad de agua en zonas costeras clave.",
+      "Acuerdos con instituciones académicas y organismos públicos y privados.",
+      "Observación de aves costeras y marinas · ciencia ciudadana.",
+    ],
+  },
+];
+
 // ─────────────────────────────────────────────────────────────
 // Photo-led hero
 // ─────────────────────────────────────────────────────────────
@@ -102,7 +170,14 @@ function V2Nav() {
             <li><a href="#equipo" onClick={() => setOpen(false)}>Equipo</a></li>
           </ul>
         </li>
-        <li><a href="#programa" onClick={() => setOpen(false)}>Proyectos</a></li>
+        <li className="v2-nav__item--dropdown">
+          <a href="#programa" onClick={() => setOpen(false)}>Proyectos</a>
+          <ul className="v2-nav__submenu">
+            {PROYECTOS.map((p) => (
+              <li key={p.slug}><a href={`#${p.slug}`} onClick={() => setOpen(false)}>{p.title}</a></li>
+            ))}
+          </ul>
+        </li>
         <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>
         <li><a href="#galeria" onClick={() => setOpen(false)}>Galería</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
@@ -283,11 +358,11 @@ function Programa() {
         <img src={PHOTOS.coast2} alt="Bahía San Antonio" />
         <div className="v2-prog__hero-veil" />
         <div className="v2-prog__hero-copy">
-          <span className="v2-label v2-label--light">02 — Programa actual</span>
+          <span className="v2-label v2-label--light">02 — Proyectos</span>
           <h2 className="v2-h2 v2-h2--light">
-            Bahía San Antonio<br/><em>bajo la lupa.</em>
+            Proyectos que <em>cuidan el territorio.</em>
           </h2>
-          <p className="v2-prog__sub">Naturaleza, conciencia y desafíos.</p>
+          <p className="v2-prog__sub">Bahía San Antonio bajo la lupa.</p>
         </div>
       </div>
 
@@ -296,39 +371,23 @@ function Programa() {
           <p className="v2-lede">
             Un programa de educación ambiental para estudiantes de nivel medio,
             centrado en el ecosistema costero más singular del Golfo San Matías —
-            Área Natural Protegida desde 1993.
+            Área Natural Protegida desde 1993. Elegí un proyecto para ver el detalle.
           </p>
         </div>
 
         <div className="v2-prog__grid">
-          <article className="v2-prog__cell">
-            <img src={PHOTOS.classroom} alt="Charla en el aula" />
-            <div>
-              <h4>Charlas-taller</h4>
-              <p>Encuentros presenciales de 40 minutos con contenido científico accesible y participación activa de los estudiantes.</p>
-            </div>
-          </article>
-          <article className="v2-prog__cell">
-            <img src={PHOTOS.bird} alt="Avifauna" />
-            <div>
-              <h4>Biodiversidad</h4>
-              <p>Reconocer las características ecológicas de la bahía y comprender su importancia regional desde la mirada científica.</p>
-            </div>
-          </article>
-          <article className="v2-prog__cell">
-            <img src={PHOTOS.tide} alt="Marea baja" />
-            <div>
-              <h4>Mareas e impacto</h4>
-              <p>Comprender la dinámica de mareas más amplia del Atlántico y los impactos de las actividades humanas en el ecosistema.</p>
-            </div>
-          </article>
-          <article className="v2-prog__cell">
-            <img src={PHOTOS.hands} alt="Compromiso comunitario" />
-            <div>
-              <h4>Pensamiento crítico</h4>
-              <p>Fomentar la capacidad de cuestionar y proponer soluciones desde una ciudadanía ambientalmente comprometida.</p>
-            </div>
-          </article>
+          {PROYECTOS.map((p, i) => (
+            <a key={p.slug} href={`#${p.slug}`} className="v2-prog__cell">
+              <div className="v2-prog__cell-photo">
+                <img src={p.img} alt={p.alt} />
+                <span className="v2-prog__cell-num">{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <div>
+                <h4>{p.title}</h4>
+                <p>{p.short}</p>
+              </div>
+            </a>
+          ))}
         </div>
 
         <aside className="v2-prog__team">
@@ -341,6 +400,26 @@ function Programa() {
             <p>Estudiantes de la Escuela Secundaria Río Negro.</p>
           </div>
         </aside>
+      </div>
+    </section>
+  );
+}
+
+function ProyectoDetalle({ p, index }) {
+  return (
+    <section className={"v2-section v2-proydet" + (index % 2 === 1 ? " v2-proydet--rev" : "")} id={p.slug}>
+      <div className="v2-proydet__card">
+        <div className="v2-proydet__photo">
+          <img src={p.img} alt={p.alt} />
+          <span className="v2-proydet__num">{String(index + 1).padStart(2, "0")}</span>
+        </div>
+        <div className="v2-proydet__body">
+          <span className="v2-label">Proyecto {index + 1} de {PROYECTOS.length}</span>
+          <h3>{p.title}</h3>
+          <p className="v2-lede">{p.full}</p>
+          <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+          <a className="v2-proydet__back" href="#programa">← Volver a proyectos</a>
+        </div>
       </div>
     </section>
   );
@@ -558,6 +637,9 @@ function SiteV2({ tweaks }) {
       <Manifiesto />
       <Equipo />
       <Programa />
+      {PROYECTOS.map((p, i) => (
+        <ProyectoDetalle key={p.slug} p={p} index={i} />
+      ))}
       <PhotoQuote
         src={PHOTOS.steppe}
         quote="Cada generación que crece comprendiendo su territorio aprende a cuidarlo. La educación ambiental no es un curso: es una forma de habitar el lugar."

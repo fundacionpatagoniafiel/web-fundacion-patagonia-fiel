@@ -25,7 +25,7 @@ const PHOTOS = {
   // Team avatars (placeholder portraits)
   p1: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop&crop=faces",
   p2: "assets/dennis-landete.jpg",
-  p3: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p3: "assets/juan-saad.jpg",
   p4: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop&crop=faces",
 };
 

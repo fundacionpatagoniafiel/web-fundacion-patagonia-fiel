@@ -195,6 +195,21 @@ function Manifiesto() {
   );
 }
 
+function QuienesCover() {
+  return (
+    <section className="v2-qcover" id="quienes">
+      <img src={PHOTOS.mesa} alt="" className="v2-qcover__img" />
+      <div className="v2-qcover__veil" />
+      <div className="v2-qcover__inner">
+        <span className="v2-label v2-label--light">01 — Quiénes somos</span>
+        <h2 className="v2-h2 v2-h2--light">
+          Una fundación que <em>escucha el territorio.</em>
+        </h2>
+      </div>
+    </section>
+  );
+}
+
 function Quienes() {
   const fines = [
     "Promover la educación ambiental en la comunidad en todos sus niveles.",
@@ -208,14 +223,7 @@ function Quienes() {
   ];
 
   return (
-    <section className="v2-section" id="quienes">
-      <div className="v2-section__head">
-        <span className="v2-label">01 — Quiénes somos</span>
-        <h2 className="v2-h2">
-          Una fundación que <em>escucha el territorio.</em>
-        </h2>
-      </div>
-
+    <section className="v2-section">
       <div className="v2-fines-wrap" id="proposito">
         <div className="v2-fines">
           <div className="v2-fines__head">Nuestros fines</div>
@@ -500,6 +508,7 @@ function SiteV2({ tweaks }) {
     <div className="v2-site" id="top" style={styleVars}>
       <V2Nav />
       <PhotoHero />
+      <QuienesCover />
       <Quienes />
       <Manifiesto />
       <Equipo />

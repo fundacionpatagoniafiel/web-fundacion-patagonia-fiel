@@ -496,6 +496,26 @@
   letter-spacing: 0.02em;
 }
 
+/* ── QUIENES COVER ── */
+.v2-qcover {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--pad-x) 64px;
+  overflow: hidden;
+}
+.v2-qcover__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.v2-qcover__veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(12,34,64,0.25) 0%, rgba(12,34,64,0.8) 100%);
+}
+.v2-qcover__inner { position: relative; max-width: 800px; }
+
 /* ── PROGRAMA ── */
 .v2-prog__hero {
   position: relative;

@@ -36,7 +36,15 @@ const PHOTOS = {
 function PhotoHero() {
   return (
     <header className="v2-hero">
-      <img src={PHOTOS.hero} alt="" className="v2-hero__img" />
+      <video
+        className="v2-hero__img"
+        src="assets/hero-video.mp4"
+        poster={PHOTOS.hero}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
       <div className="v2-hero__veil" />
       <div className="v2-hero__inner">
         <div className="v2-hero__eyebrow">

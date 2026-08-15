@@ -393,7 +393,14 @@ function Quienes() {
             ))}
           </ol>
         </div>
-        <img className="v2-fines__photo" src={PHOTOS.steppe} alt="Estepa patagónica" />
+        <video
+          className="v2-fines__photo"
+          src="assets/fines-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
       </div>
     </section>
   );
@@ -545,17 +552,6 @@ function Programa() {
             </a>
           ))}
         </div>
-
-        <aside className="v2-prog__team">
-          <div>
-            <span className="v2-label">Equipo responsable</span>
-            <p><b>Dr. Juan Francisco Saad</b> · responsable<br/><b>Est. Camilo Juárez Viecho</b> · colaborador</p>
-          </div>
-          <div>
-            <span className="v2-label">Destinatarios</span>
-            <p>Estudiantes de la Escuela Secundaria Río Negro.</p>
-          </div>
-        </aside>
       </div>
     </section>
   );

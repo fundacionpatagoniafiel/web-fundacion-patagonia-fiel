@@ -974,6 +974,19 @@
   color: var(--navy-deep);
   transform: scale(1.06);
 }
+.v2-gallery__credit {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+.v2-gallery__credit a {
+  color: var(--ink-soft);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.v2-gallery__credit a:hover { color: var(--accent); }
 .v2-gallery__dots {
   display: flex;
   justify-content: center;

@@ -432,7 +432,7 @@ function Programa() {
   return (
     <section className="v2-section v2-section--programa" id="programa">
       <div className="v2-prog__hero">
-        <img src={PHOTOS.coast1} alt="Bahía San Antonio" />
+        <img src="assets/proyecto-observacion-costera.jpg" alt="Observación costera en la Bahía San Antonio" />
         <div className="v2-prog__hero-veil" />
         <div className="v2-prog__hero-copy">
           <span className="v2-label v2-label--light">02 — Proyectos</span>
@@ -589,12 +589,22 @@ function Colaborar() {
 
 function Galeria() {
   const photos = [
-    { src: PHOTOS.coast1, alt: "Costa de la Bahía San Antonio" },
-    { src: PHOTOS.bird, alt: "Aves costeras" },
-    { src: PHOTOS.rocks, alt: "Rocas costeras" },
-    { src: PHOTOS.research, alt: "Trabajo de campo" },
-    { src: PHOTOS.hands, alt: "Compromiso comunitario" },
-    { src: PHOTOS.classroom, alt: "Charla en el aula" },
+    {
+      src: "assets/galeria-gaviotas-vuelo.jpg",
+      alt: "Gaviotas en vuelo",
+      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    { src: "assets/galeria-lobos-marinos-familia.jpg", alt: "Familia de lobos marinos en la playa" },
+    { src: "assets/galeria-pichon-pinguino.jpg", alt: "Pichón de pingüino" },
+    { src: "assets/galeria-pinguinos-marea.jpg", alt: "Pingüinos en la marea" },
+    { src: "assets/galeria-pinguino-magallanico.jpg", alt: "Pingüino magallánico" },
+    { src: "assets/galeria-lobo-marino-submarino.jpg", alt: "Lobo marino bajo el agua" },
+    { src: "assets/galeria-ballena-submarina.jpg", alt: "Ballena bajo el agua" },
+    { src: "assets/galeria-observacion-aves.jpg", alt: "Observación de aves en la costa" },
+    { src: "assets/galeria-avistaje-binoculares.jpg", alt: "Avistaje con binoculares" },
+    { src: "assets/galeria-lobos-marinos-ola.jpg", alt: "Lobos marinos junto al oleaje" },
+    { src: "assets/galeria-pinguinos-pareja.jpg", alt: "Pareja de pingüinos" },
+    { src: "assets/galeria-caracara.jpg", alt: "Caracara en la estepa" },
   ];
   const [index, setIndex] = useState(0);
   const prev = () => setIndex((i) => (i - 1 + photos.length) % photos.length);
@@ -617,6 +627,11 @@ function Galeria() {
           <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </button>
       </div>
+      {photos[index].credit && (
+        <div className="v2-gallery__credit">
+          Foto: <a href={photos[index].credit.url} target="_blank" rel="noopener noreferrer">{photos[index].credit.name}</a>
+        </div>
+      )}
       <div className="v2-gallery__dots">
         {photos.map((_, i) => (
           <button
@@ -738,7 +753,7 @@ function SiteV2({ tweaks }) {
         <ProyectoDetalle key={p.slug} p={p} index={i} />
       ))}
       <PhotoQuote
-        src={PHOTOS.steppe}
+        src="assets/manifiesto-lobos-marinos-bn.jpg"
         quote="Cada generación que crece comprendiendo su territorio aprende a cuidarlo. La educación ambiental no es un curso: es una forma de habitar el lugar."
         source="Programa Bahía San Antonio bajo la lupa"
       />

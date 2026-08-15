@@ -32,7 +32,7 @@ const PHOTOS = {
 const PROYECTOS = [
   {
     slug: "proyecto-charlas",
-    title: "Charlas-taller",
+    title: "Educación Ambiental",
     img: PHOTOS.classroom,
     alt: "Charla en el aula",
     short: "Encuentros presenciales de 40 minutos con contenido científico accesible y participación activa de los estudiantes.",
@@ -45,7 +45,7 @@ const PROYECTOS = [
   },
   {
     slug: "proyecto-biodiversidad",
-    title: "Biodiversidad",
+    title: "Canal del Indio",
     img: PHOTOS.bird,
     alt: "Avifauna",
     short: "Reconocer las características ecológicas de la bahía y comprender su importancia regional desde la mirada científica.",
@@ -58,7 +58,7 @@ const PROYECTOS = [
   },
   {
     slug: "proyecto-mareas",
-    title: "Mareas e impacto",
+    title: "Estación experimental de Biofiltración",
     img: PHOTOS.tide,
     alt: "Marea baja",
     short: "Comprender la dinámica de mareas más amplia del Atlántico y los impactos de las actividades humanas en el ecosistema.",
@@ -71,7 +71,7 @@ const PROYECTOS = [
   },
   {
     slug: "proyecto-pensamiento",
-    title: "Pensamiento crítico",
+    title: "Arroyo Valcheta",
     img: PHOTOS.hands,
     alt: "Compromiso comunitario",
     short: "Fomentar la capacidad de cuestionar y proponer soluciones desde una ciudadanía ambientalmente comprometida.",
@@ -84,7 +84,7 @@ const PROYECTOS = [
   },
   {
     slug: "proyecto-observatorio",
-    title: "Observatorio Oceanográfico",
+    title: "Observatorio Oceanográfico Costero",
     img: PHOTOS.research,
     alt: "Trabajo de campo",
     short: "Mediciones sistemáticas de calidad de agua y observación de fauna costera en articulación con instituciones científicas.",

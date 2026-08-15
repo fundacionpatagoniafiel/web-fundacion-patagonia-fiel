@@ -49,14 +49,16 @@ const PROYECTOS = [
   {
     slug: "proyecto-biodiversidad",
     title: "Canal del Indio",
-    img: PHOTOS.bird,
-    alt: "Avifauna",
-    short: "Reconocer las características ecológicas de la bahía y comprender su importancia regional desde la mirada científica.",
-    full: "Un recorrido por las especies que habitan la Bahía San Antonio — aves migratorias, fauna marina y la trama que las conecta — para que los estudiantes entiendan por qué este ecosistema fue declarado Área Natural Protegida.",
+    img: "assets/proyecto-canal-del-indio.jpg",
+    alt: "Vista satelital del Canal del Indio",
+    short: "Cuidar a nuestro territorio es la mejor bienvenida a quienes nos visitan.",
+    full: "Transformar el margen norte del Canal del Indio —hoy degradado por acumulación de residuos— en un paseo de salud activo y verde, de acceso libre para toda la comunidad. La acción de limpieza y puesta en valor se realizará cada año en noviembre–diciembre, y se consolidará como el gesto colectivo de la localidad hacia su territorio, como bienvenida a la temporada de aire libre y como símbolo de identidad y orgullo patagónico.",
+    bulletsHead: "Pilares del proyecto",
     bullets: [
-      "Reconocimiento de especies clave de la bahía.",
-      "Por qué el área está protegida desde 1993.",
-      "Vínculo entre biodiversidad y calidad de vida local.",
+      "Puesta en valor ambiental: limpieza y recuperación paisajística del canal.",
+      "Paseo de salud: espacio para caminatas, deporte y contacto con la naturaleza.",
+      "Articulación comunitaria: vecinos, empresas e instituciones juntas.",
+      "Continuidad: acción anual que se renueva antes de cada temporada.",
     ],
   },
   {

@@ -693,11 +693,11 @@ function Splash() {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    const fadeTimer = setTimeout(() => setFading(true), 3200);
+    const fadeTimer = setTimeout(() => setFading(true), 2200);
     const removeTimer = setTimeout(() => {
       setVisible(false);
       document.body.style.overflow = "";
-    }, 4000);
+    }, 3000);
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);

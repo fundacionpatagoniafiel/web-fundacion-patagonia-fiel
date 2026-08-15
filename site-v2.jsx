@@ -395,25 +395,25 @@ function Equipo() {
       name: "María Libertad Chibli",
       role: "Vocal Titular",
       img: PHOTOS.p4,
-      bio: "Vocal Titular del Consejo de Administración de la Fundación Patagonia Fiel.",
+      bio: "Licenciada en Realización Audiovisual y se encuentra finalizando la Licenciatura en Bibliotecología y Documentación.",
     },
     {
       name: "Marianela Gastaldi",
       role: "Colaboradora",
       img: PHOTOS.p5,
-      bio: "Forma parte del equipo de la Fundación Patagonia Fiel.",
+      bio: "Bióloga y Doctora en Ciencias Biológicas, investigadora del CONICET y docente de la Universidad Nacional del Comahue.",
     },
     {
       name: "Camilo Juárez",
       role: "Estudiante · Colaborador",
       img: PHOTOS.p6,
-      bio: "Colaborador del programa educativo Bahía San Antonio bajo la lupa.",
+      bio: "Estudiante avanzado de la Licenciatura en Biología Marina.",
     },
     {
       name: "Agustina Tievas",
       role: "Estudiante · Colaboradora",
       img: PHOTOS.p7,
-      bio: "Colaboradora del programa educativo Bahía San Antonio bajo la lupa.",
+      bio: "Estudiante avanzada de la Licenciatura en Biología Marina.",
     },
   ];
   const pageSize = 4;

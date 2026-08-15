@@ -652,7 +652,13 @@
 }
 
 /* ── PROYECTO DETALLE ── */
+.v2-proydet {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .v2-proydet__card {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -696,10 +702,11 @@
 }
 .v2-proydet__bhead {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--navy-deep);
-  margin-top: 4px;
+  margin-top: 8px;
+  line-height: 1.15;
 }
 .v2-proydet__body ul {
   list-style: none; margin: 0; padding: 0;

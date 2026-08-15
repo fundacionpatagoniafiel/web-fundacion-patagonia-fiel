@@ -33,7 +33,7 @@ const PROYECTOS = [
   {
     slug: "proyecto-charlas",
     title: "Educación Ambiental",
-    img: PHOTOS.classroom,
+    img: "assets/proyecto-educacion-ambiental.jpg",
     alt: "Charla en el aula",
     short: "La educación ambiental es la herramienta clave para formar una ciudadanía responsable y comprometida con su cuidado.",
     full: "Promover la conciencia ambiental en estudiantes de nivel medio a partir del conocimiento de la Bahía San Antonio como sistema socioambiental. Mediante charlas-taller con contenido científico accesible, se busca formar ciudadanía responsable y comprometida con el cuidado de uno de los ecosistemas costeros más relevantes del Golfo San Matías.",

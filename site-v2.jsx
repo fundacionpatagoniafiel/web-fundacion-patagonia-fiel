@@ -344,20 +344,46 @@ function QuienesCover() {
 function Quienes() {
   const fines = [
     "Promover la educación ambiental en la comunidad en todos sus niveles.",
-    "Fomentar la comunicación, sensibilización y difusión socioambiental.",
-    "Impulsar iniciativas de desarrollo local sostenible.",
-    "Colaborar en la preservación del patrimonio cultural y natural.",
-    "Investigar para la preservación de la biodiversidad y los ecosistemas.",
-    "Promover prácticas de manejo sostenible de recursos naturales.",
-    "Favorecer la participación comunitaria en decisiones ambientales.",
-    "Cooperar con instituciones científicas y de la sociedad civil.",
+    "Fomentar la comunicación, sensibilización y difusión de problemáticas y soluciones socioambientales.",
+    "Impulsar iniciativas de desarrollo local sostenible que contribuyan al bienestar social y económico de la comunidad.",
+    "Colaborar en el mejoramiento y preservación del patrimonio socio-comunitario, cultural y natural.",
+    "Realizar investigaciones y acciones para la preservación de la biodiversidad y los ecosistemas.",
+    "Promover prácticas y proyectos de manejo sostenible del ambiente y de los recursos naturales.",
+    "Favorecer la participación comunitaria en la toma de decisiones ambientales y en la gestión del territorio.",
+    "Establecer vínculos y acuerdos de cooperación con instituciones educativas, científicas y organizaciones de la sociedad civil, locales, provinciales, nacionales e internacionales.",
+    "Contribuir al diseño e implementación de políticas públicas orientadas a la sostenibilidad ambiental y social.",
   ];
 
   return (
-    <section className="v2-section">
-      <div className="v2-fines-wrap" id="proposito">
+    <section className="v2-section" id="proposito">
+      <div className="v2-section__head">
+        <span className="v2-label">Propósito</span>
+        <h2 className="v2-h2">
+          Quiénes somos <em>y por qué existimos.</em>
+        </h2>
+        <p className="v2-lede">
+          La Fundación Patagonia Fiel es una organización sin fines de lucro
+          constituida el 15 de diciembre de 2025 en la ciudad de San Antonio
+          Oeste, provincia de Río Negro. Surge de la iniciativa de un grupo de
+          profesionales vinculados al ambiente, la educación, la investigación
+          y la conservación, que decidieron articular su experiencia en un
+          trabajo colectivo orientado al cuidado del entorno natural y al
+          fortalecimiento comunitario en la costa marítima rionegrina.
+        </p>
+      </div>
+
+      <div className="v2-objetivo">
+        <span className="v2-label">Nuestro objetivo</span>
+        <p>
+          “Generar espacios que fortalezcan el vínculo entre las personas y
+          los territorios que habitan, promoviendo la revalorización de la
+          naturaleza y su integración con la vida comunitaria.”
+        </p>
+      </div>
+
+      <div className="v2-fines-wrap">
         <div className="v2-fines">
-          <div className="v2-fines__head">Nuestros fines</div>
+          <div className="v2-fines__head">Fines de la Fundación</div>
           <ol className="v2-fines__list">
             {fines.map((f, i) => (
               <li key={i}>

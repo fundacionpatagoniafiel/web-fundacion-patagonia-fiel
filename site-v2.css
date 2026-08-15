@@ -515,7 +515,47 @@
 }
 
 .v2-team__head { margin-bottom: 40px; }
+.v2-team__paged {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.v2-team__arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .2s, transform .2s, color .2s;
+}
+.v2-team__arrow:hover {
+  background: var(--accent);
+  color: var(--navy-deep);
+  transform: scale(1.06);
+}
+.v2-team__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.v2-team__dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s, transform .2s;
+}
+.v2-team__dot--active { background: var(--accent); transform: scale(1.2); }
 .v2-team__grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
@@ -1008,6 +1048,8 @@
 @media (max-width: 640px) {
   .v2-gallery { gap: 10px; }
   .v2-gallery__arrow { width: 40px; height: 40px; }
+  .v2-team__paged { gap: 10px; }
+  .v2-team__arrow { width: 36px; height: 36px; }
 }
 
 /* ── CONTACTO ── */

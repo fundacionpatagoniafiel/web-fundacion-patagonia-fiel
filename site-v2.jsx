@@ -26,6 +26,9 @@ const PHOTOS = {
   p2: "assets/dennis-landete.jpg",
   p3: "assets/juan-saad.jpg",
   p4: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p5: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p6: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p7: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80&auto=format&fit=crop&crop=faces",
 };
 
 const PROYECTOS = [
@@ -394,7 +397,31 @@ function Equipo() {
       img: PHOTOS.p4,
       bio: "Vocal Titular del Consejo de Administración de la Fundación Patagonia Fiel.",
     },
+    {
+      name: "Marianela Gastaldi",
+      role: "Colaboradora",
+      img: PHOTOS.p5,
+      bio: "Forma parte del equipo de la Fundación Patagonia Fiel.",
+    },
+    {
+      name: "Camilo Juárez",
+      role: "Estudiante · Colaborador",
+      img: PHOTOS.p6,
+      bio: "Colaborador del programa educativo Bahía San Antonio bajo la lupa.",
+    },
+    {
+      name: "Agustina Tievas",
+      role: "Estudiante · Colaboradora",
+      img: PHOTOS.p7,
+      bio: "Colaboradora del programa educativo Bahía San Antonio bajo la lupa.",
+    },
   ];
+  const pageSize = 4;
+  const pages = [];
+  for (let i = 0; i < team.length; i += pageSize) pages.push(team.slice(i, i + pageSize));
+  const [page, setPage] = useState(0);
+  const prevPage = () => setPage((p) => (p - 1 + pages.length) % pages.length);
+  const nextPage = () => setPage((p) => (p + 1) % pages.length);
 
   return (
     <section className="v2-section" id="equipo">
@@ -403,26 +430,50 @@ function Equipo() {
           <span className="v2-label">Consejo de Administración</span>
           <h3 className="v2-h3">Las personas detrás del proyecto.</h3>
         </div>
-        <div className="v2-team__grid">
-          {team.map((p) => (
-            <figure key={p.name} className="v2-team__card">
-              <div className="v2-team__photo">
-                <div className="v2-team__flip">
-                  <div className="v2-team__face v2-team__face--front">
-                    <img src={p.img} alt={p.name} />
-                  </div>
-                  <div className="v2-team__face v2-team__face--back">
-                    <p>{p.bio}</p>
+        <div className="v2-team__paged">
+          {pages.length > 1 && (
+            <button className="v2-team__arrow v2-team__arrow--prev" onClick={prevPage} aria-label="Personas anteriores">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+          )}
+          <div className="v2-team__grid">
+            {pages[page].map((p) => (
+              <figure key={p.name} className="v2-team__card">
+                <div className="v2-team__photo">
+                  <div className="v2-team__flip">
+                    <div className="v2-team__face v2-team__face--front">
+                      <img src={p.img} alt={p.name} />
+                    </div>
+                    <div className="v2-team__face v2-team__face--back">
+                      <p>{p.bio}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <figcaption>
-                <b>{p.name}</b>
-                <span>{p.role}</span>
-              </figcaption>
-            </figure>
-          ))}
+                <figcaption>
+                  <b>{p.name}</b>
+                  <span>{p.role}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          {pages.length > 1 && (
+            <button className="v2-team__arrow v2-team__arrow--next" onClick={nextPage} aria-label="Más personas">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+          )}
         </div>
+        {pages.length > 1 && (
+          <div className="v2-team__dots">
+            {pages.map((_, i) => (
+              <button
+                key={i}
+                className={"v2-team__dot" + (i === page ? " v2-team__dot--active" : "")}
+                onClick={() => setPage(i)}
+                aria-label={`Ir a la página ${i + 1}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

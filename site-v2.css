@@ -390,9 +390,9 @@
   object-fit: cover;
   box-shadow: 0 24px 60px -28px rgba(12,34,64,0.45);
 }
-.v2-mani__photo--1 { width: 60%; height: 56%; top: 0; left: 0; }
-.v2-mani__photo--2 { width: 50%; height: 38%; bottom: 8%; right: 0; }
-.v2-mani__photo--3 { width: 42%; height: 36%; bottom: 0; left: 18%; border: 6px solid var(--paper); }
+.v2-mani__photo--1 { width: 62%; height: 62%; top: 0; left: 0; }
+.v2-mani__photo--2 { width: 55%; height: 44%; bottom: 0; right: 0; border: 6px solid var(--paper); }
+.v2-mani__map { border: 0; background: var(--paper-warm); }
 .v2-mani__sig {
   margin-top: 32px;
   padding-top: 20px;

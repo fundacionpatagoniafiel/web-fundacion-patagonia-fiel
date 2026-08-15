@@ -291,33 +291,35 @@ function Manifiesto() {
           ref={photosRef}
           className={"v2-mani__photos v2-reveal v2-reveal--left" + (photosVisible ? " v2-reveal--visible" : "")}
         >
-          <img src={PHOTOS.coast1} alt="Costa de la Bahía San Antonio" className="v2-mani__photo v2-mani__photo--1" />
-          <img src={PHOTOS.bird} alt="Aves costeras" className="v2-mani__photo v2-mani__photo--2" />
-          <img src={PHOTOS.tide} alt="Marea baja" className="v2-mani__photo v2-mani__photo--3" />
+          <iframe
+            className="v2-mani__photo v2-mani__photo--1 v2-mani__map"
+            src="https://maps.google.com/maps?q=San+Antonio+Oeste,+R%C3%ADo+Negro,+Argentina&z=12&output=embed"
+            title="Mapa de San Antonio Oeste"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <img src="assets/hero-san-antonio-oeste.jpg" alt="Vista aérea de la Bahía San Antonio" className="v2-mani__photo v2-mani__photo--2" />
         </div>
         <div
           ref={copyRef}
           className={"v2-mani__copy v2-reveal v2-reveal--right" + (copyVisible ? " v2-reveal--visible" : "")}
         >
-          <span className="v2-label">Manifiesto</span>
+          <span className="v2-label">Ubicación</span>
           <h2 className="v2-h2">
-            La Patagonia no se hereda: <em>se cuida.</em>
+            ¿Dónde nos <em>encontramos?</em>
           </h2>
           <p className="v2-lede">
-            Nacimos en San Antonio Oeste, frente a una de las costas más singulares
-            del Atlántico Sur. Vimos cómo se erosionan los vínculos entre la gente y
-            su territorio. Decidimos hacer algo al respecto.
+            Estamos ubicados en San Antonio Oeste, Río Negro, dentro de la
+            Bahía San Antonio.
           </p>
           <p>
-            La <strong>Fundación Patagonia Fiel</strong> existe para generar
-            espacios que fortalezcan ese vínculo, integrando a la naturaleza en la
-            vida comunitaria a través de la educación ambiental, la investigación
-            aplicada y proyectos de desarrollo local sostenible.
+            La Bahía San Antonio es uno de los ecosistemas costeros más
+            relevantes del Golfo San Matías por su biodiversidad y su dinámica
+            de mareas extremas. Declarada Área Natural Protegida en 1993 y
+            reconocida como sitio de importancia hemisférica para aves
+            playeras migratorias, su cuidado constituye un desafío ambiental
+            y social.
           </p>
-          <div className="v2-mani__sig">
-            — Consejo de Administración<br/>
-            <span>San Antonio Oeste · diciembre 2025</span>
-          </div>
         </div>
       </div>
     </section>

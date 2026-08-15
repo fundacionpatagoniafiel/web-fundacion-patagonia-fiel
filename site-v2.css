@@ -40,6 +40,55 @@
 }
 .v2-site strong { font-weight: 600; color: var(--navy-deep); }
 
+/* ── SPLASH ── */
+.v2-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(12, 34, 64, 0.94);
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+.v2-splash--fading {
+  opacity: 0;
+  pointer-events: none;
+}
+.v2-splash__logo {
+  width: clamp(140px, 22vw, 260px);
+  height: auto;
+  animation: v2-splash-in 1s ease;
+}
+.v2-splash__word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--paper);
+  text-align: center;
+  animation: v2-splash-in 1s ease;
+}
+.v2-splash__word small {
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.v2-splash__word b {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+@keyframes v2-splash-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* ── NAV ── */
 .v2-nav {
   position: fixed;

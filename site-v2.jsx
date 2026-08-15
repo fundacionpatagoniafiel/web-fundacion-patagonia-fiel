@@ -687,6 +687,36 @@ function V2Footer() {
   );
 }
 
+function Splash() {
+  const [visible, setVisible] = useState(true);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const fadeTimer = setTimeout(() => setFading(true), 3200);
+    const removeTimer = setTimeout(() => {
+      setVisible(false);
+      document.body.style.overflow = "";
+    }, 4000);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className={"v2-splash" + (fading ? " v2-splash--fading" : "")}>
+      <img src="assets/logo-nuevo.png" alt="" className="v2-splash__logo" />
+      <div className="v2-splash__word">
+        <small>Fundación</small>
+        <b>Patagonia Fiel</b>
+      </div>
+    </div>
+  );
+}
+
 function SiteV2({ tweaks }) {
   const styleVars = {
     "--accent": tweaks.accent,
@@ -696,6 +726,7 @@ function SiteV2({ tweaks }) {
   };
   return (
     <div className="v2-site" id="top" style={styleVars}>
+      <Splash />
       <V2Nav />
       <PhotoHero />
       <QuienesCover />

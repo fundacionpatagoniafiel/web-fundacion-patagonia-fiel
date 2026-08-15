@@ -987,8 +987,8 @@
 }
 .v2-gallery__frame {
   flex: 1;
-  aspect-ratio: 16 / 7;
-  max-height: 420px;
+  aspect-ratio: 16 / 8;
+  max-height: 500px;
   border-radius: 12px;
   overflow: hidden;
   background: var(--paper-warm);

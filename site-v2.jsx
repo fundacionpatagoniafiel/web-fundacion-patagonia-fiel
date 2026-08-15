@@ -5,7 +5,6 @@ const PHOTOS = {
   hero: "assets/hero-san-antonio-oeste.jpg",
   // Coastal Patagonia / sea
   coast1: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80&auto=format&fit=crop",
-  coast2: "https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=1600&q=80&auto=format&fit=crop",
   // Patagonia landscape
   mesa: "https://images.unsplash.com/photo-1531168556467-80aace0d0144?w=1600&q=80&auto=format&fit=crop",
   steppe: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80&auto=format&fit=crop",
@@ -102,6 +101,49 @@ const PROYECTOS = [
     contextHead: "Contexto regional",
     context: "La costa atlántica de Río Negro (40–42°S) presenta dos regímenes oceanográficos: el frente estuarial del Río Negro al noreste y aguas de plataforma subantártica al sur. Marca la transición entre las provincias biogeográficas Argentina y Magallánica, con cinco áreas naturales marinas protegidas y notable biodiversidad. El conocimiento actual es escaso y fragmentado, limitando la evaluación de tendencias y pronósticos a corto y mediano plazo.",
     bullets: [],
+  },
+];
+
+const NOVEDADES = [
+  {
+    slug: "noticia-1",
+    title: "Noticia 1",
+    img: PHOTOS.workshop,
+    alt: "Noticia 1",
+    short: "Contá acá en una línea de qué trató esta novedad.",
+    full: "Contá acá cuándo se hizo este evento, qué pasó y quiénes participaron. Este es un texto de relleno: reemplazalo por la crónica real de la novedad.",
+  },
+  {
+    slug: "noticia-2",
+    title: "Noticia 2",
+    img: PHOTOS.hands,
+    alt: "Noticia 2",
+    short: "Contá acá en una línea de qué trató esta novedad.",
+    full: "Contá acá cuándo se hizo este evento, qué pasó y quiénes participaron. Este es un texto de relleno: reemplazalo por la crónica real de la novedad.",
+  },
+  {
+    slug: "noticia-3",
+    title: "Noticia 3",
+    img: PHOTOS.classroom,
+    alt: "Noticia 3",
+    short: "Contá acá en una línea de qué trató esta novedad.",
+    full: "Contá acá cuándo se hizo este evento, qué pasó y quiénes participaron. Este es un texto de relleno: reemplazalo por la crónica real de la novedad.",
+  },
+  {
+    slug: "noticia-4",
+    title: "Noticia 4",
+    img: PHOTOS.bird,
+    alt: "Noticia 4",
+    short: "Contá acá en una línea de qué trató esta novedad.",
+    full: "Contá acá cuándo se hizo este evento, qué pasó y quiénes participaron. Este es un texto de relleno: reemplazalo por la crónica real de la novedad.",
+  },
+  {
+    slug: "noticia-5",
+    title: "Noticia 5",
+    img: PHOTOS.coast1,
+    alt: "Noticia 5",
+    short: "Contá acá en una línea de qué trató esta novedad.",
+    full: "Contá acá cuándo se hizo este evento, qué pasó y quiénes participaron. Este es un texto de relleno: reemplazalo por la crónica real de la novedad.",
   },
 ];
 
@@ -390,7 +432,7 @@ function Programa() {
   return (
     <section className="v2-section v2-section--programa" id="programa">
       <div className="v2-prog__hero">
-        <img src={PHOTOS.coast2} alt="Bahía San Antonio" />
+        <img src={PHOTOS.coast1} alt="Bahía San Antonio" />
         <div className="v2-prog__hero-veil" />
         <div className="v2-prog__hero-copy">
           <span className="v2-label v2-label--light">02 — Proyectos</span>
@@ -468,65 +510,47 @@ function ProyectoDetalle({ p, index }) {
 }
 
 function Plan() {
-  const years = [
-    {
-      year: "Primer año",
-      title: "Educación y sensibilización",
-      img: PHOTOS.workshop,
-      bullets: [
-        "Charlas y talleres en escuelas primarias (4° y 5°) y secundarias de Río Negro.",
-        "Materiales didácticos y actividades participativas para la comunidad.",
-        "La educación como meta permanente de la fundación.",
-      ],
-    },
-    {
-      year: "Segundo año",
-      title: "Saneamiento y puesta en valor",
-      img: PHOTOS.rocks,
-      bullets: [
-        "Mantenimiento de sectores costeros y ambientes naturales de uso comunitario.",
-        "Mejora del entorno y equipamiento básico en áreas recreativas.",
-        "Desarrollo del Paseo de Salud — circuito natural en San Antonio Oeste.",
-      ],
-    },
-    {
-      year: "Tercer año",
-      title: "Observatorio Oceanográfico",
-      img: PHOTOS.research,
-      bullets: [
-        "Mediciones sistemáticas de calidad de agua en zonas costeras clave.",
-        "Acuerdos con instituciones académicas, organismos públicos y privados.",
-        "Observación de aves costeras y marinas · ciencia ciudadana.",
-      ],
-    },
-  ];
-
   return (
     <section className="v2-section v2-section--plan" id="plan">
       <div className="v2-section__head">
-        <span className="v2-label">03 — Plan trienal</span>
+        <span className="v2-label">03 — Novedades</span>
         <h2 className="v2-h2">
-          Tres años, <em>un mismo horizonte.</em>
+          Lo último de <em>la fundación.</em>
         </h2>
         <p className="v2-h2-sub">
-          Una proyección que crece desde el aula hasta la observación científica continua del Golfo.
+          Eventos, jornadas y avances que vamos sumando en el territorio.
         </p>
       </div>
 
-      <div className="v2-plan">
-        {years.map((y, i) => (
-          <article key={y.year} className="v2-plan__card">
-            <div className="v2-plan__photo">
-              <img src={y.img} alt={y.title} />
-              <span className="v2-plan__num">{String(i + 1).padStart(2, "0")}</span>
+      <div className="v2-news">
+        {NOVEDADES.map((n) => (
+          <article key={n.slug} className="v2-news__card">
+            <div className="v2-news__photo">
+              <img src={n.img} alt={n.alt} />
             </div>
-            <div className="v2-plan__body">
-              <span className="v2-label">{y.year}</span>
-              <h3>{y.title}</h3>
-              <ul>{y.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
-            </div>
+            <h3>{n.title}</h3>
+            <p>{n.short}</p>
+            <a className="v2-news__btn" href={`#${n.slug}`}>Ver más</a>
           </article>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function NoticiaDetalle({ n, index }) {
+  return (
+    <section className={"v2-section v2-newsdet" + (index % 2 === 1 ? " v2-newsdet--rev" : "")} id={n.slug}>
+      <div className="v2-newsdet__card">
+        <div className="v2-newsdet__photo">
+          <img src={n.img} alt={n.alt} />
+        </div>
+        <div className="v2-newsdet__body">
+          <span className="v2-label">Noticia {index + 1} de {NOVEDADES.length}</span>
+          <h3>{n.title}</h3>
+          <p className="v2-lede">{n.full}</p>
+          <a className="v2-newsdet__back" href="#plan">← Volver a novedades</a>
+        </div>
       </div>
     </section>
   );
@@ -688,6 +712,9 @@ function SiteV2({ tweaks }) {
         source="Programa Bahía San Antonio bajo la lupa"
       />
       <Plan />
+      {NOVEDADES.map((n, i) => (
+        <NoticiaDetalle key={n.slug} n={n} index={i} />
+      ))}
       <Colaborar />
       <Galeria />
       <Contacto />

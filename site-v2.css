@@ -654,6 +654,7 @@
 /* ── PROYECTO DETALLE ── */
 .v2-proydet {
   min-height: 100vh;
+  padding: 32px var(--pad-x);
   display: flex;
   align-items: center;
 }
@@ -1091,6 +1092,7 @@
   .v2-plan__card, .v2-plan__card:nth-child(even) { grid-template-columns: 1fr; direction: ltr; }
   .v2-plan__photo { min-height: 240px; }
   .v2-plan__body { padding: 36px 28px; }
+  .v2-proydet { min-height: 0; padding: 60px var(--pad-x); }
   .v2-proydet__card, .v2-proydet--rev .v2-proydet__card { grid-template-columns: 1fr; direction: ltr; }
   .v2-proydet__photo { min-height: 240px; }
   .v2-proydet__body { padding: 36px 28px; }

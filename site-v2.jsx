@@ -327,7 +327,7 @@ function Manifiesto() {
 function QuienesCover() {
   return (
     <section className="v2-qcover" id="quienes">
-      <img src={PHOTOS.mesa} alt="" className="v2-qcover__img" />
+      <img src="assets/quienes-buceo.jpg" alt="" className="v2-qcover__img" />
       <div className="v2-qcover__veil" />
       <div className="v2-qcover__inner">
         <span className="v2-label v2-label--light">01 — Quiénes somos</span>

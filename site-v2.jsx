@@ -35,12 +35,15 @@ const PROYECTOS = [
     title: "Educación Ambiental",
     img: PHOTOS.classroom,
     alt: "Charla en el aula",
-    short: "Encuentros presenciales de 40 minutos con contenido científico accesible y participación activa de los estudiantes.",
-    full: "Encuentros presenciales de 40 minutos pensados para acercar el ecosistema costero a estudiantes de nivel medio con un lenguaje claro y dinámicas participativas. Cada charla combina contenido científico con espacio para preguntas, buscando que los estudiantes se lleven una comprensión concreta de su entorno.",
+    short: "La educación ambiental es la herramienta clave para formar una ciudadanía responsable y comprometida con su cuidado.",
+    full: "Promover la conciencia ambiental en estudiantes de nivel medio a partir del conocimiento de la Bahía San Antonio como sistema socioambiental. Mediante charlas-taller con contenido científico accesible, se busca formar ciudadanía responsable y comprometida con el cuidado de uno de los ecosistemas costeros más relevantes del Golfo San Matías.",
+    bulletsHead: "Contenidos de la charla-taller",
     bullets: [
-      "Contenido adaptado a estudiantes de nivel medio.",
-      "Participación activa: preguntas y debate guiado.",
-      "Se dicta en escuelas de la zona de San Antonio Oeste.",
+      "Biodiversidad de la bahía: especies clave y su rol ecológico.",
+      "Dinámica de mareas extremas y su importancia ecosistémica.",
+      "Impactos de las actividades humanas sobre el ambiente costero.",
+      "Estrategias de conservación y prácticas sustentables.",
+      "Espacio de participación e intercambio con los estudiantes.",
     ],
   },
   {
@@ -444,6 +447,7 @@ function ProyectoDetalle({ p, index }) {
           <span className="v2-label">Proyecto {index + 1} de {PROYECTOS.length}</span>
           <h3>{p.title}</h3>
           <p className="v2-lede">{p.full}</p>
+          {p.bulletsHead && <b className="v2-proydet__bhead">{p.bulletsHead}</b>}
           <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
           <a className="v2-proydet__back" href="#programa">← Volver a proyectos</a>
         </div>

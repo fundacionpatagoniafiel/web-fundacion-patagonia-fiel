@@ -95,15 +95,13 @@ const PROYECTOS = [
   {
     slug: "proyecto-observatorio",
     title: "Observatorio Oceanográfico Costero",
-    img: PHOTOS.research,
-    alt: "Trabajo de campo",
-    short: "Mediciones sistemáticas de calidad de agua y observación de fauna costera en articulación con instituciones científicas.",
-    full: "Mediciones sistemáticas de calidad de agua en zonas costeras clave, en articulación con instituciones académicas y organismos públicos y privados, sumado a observación de aves costeras y marinas a través de ciencia ciudadana.",
-    bullets: [
-      "Mediciones sistemáticas de calidad de agua en zonas costeras clave.",
-      "Acuerdos con instituciones académicas y organismos públicos y privados.",
-      "Observación de aves costeras y marinas · ciencia ciudadana.",
-    ],
+    img: "assets/proyecto-observatorio.jpg",
+    alt: "Monitoreo costero en la Bahía San Antonio",
+    short: "Observar el mar de forma sostenida es la única manera de entender cómo cambia.",
+    full: "Relevar datos ambientales a largo plazo, proporcionando una base sólida para la investigación y la gestión de recursos marinos costeros. Los nodos operan con frecuencia mensual registrando variables físicas, químicas y biológicas en tres sitios de alto interés científico y de gestión.",
+    contextHead: "Contexto regional",
+    context: "La costa atlántica de Río Negro (40–42°S) presenta dos regímenes oceanográficos: el frente estuarial del Río Negro al noreste y aguas de plataforma subantártica al sur. Marca la transición entre las provincias biogeográficas Argentina y Magallánica, con cinco áreas naturales marinas protegidas y notable biodiversidad. El conocimiento actual es escaso y fragmentado, limitando la evaluación de tendencias y pronósticos a corto y mediano plazo.",
+    bullets: [],
   },
 ];
 
@@ -454,8 +452,14 @@ function ProyectoDetalle({ p, index }) {
           <span className="v2-label">Proyecto {index + 1} de {PROYECTOS.length}</span>
           <h3>{p.title}</h3>
           <p className="v2-lede">{p.full}</p>
+          {p.context && (
+            <>
+              <b className="v2-proydet__bhead">{p.contextHead}</b>
+              <p className="v2-lede">{p.context}</p>
+            </>
+          )}
           {p.bulletsHead && <b className="v2-proydet__bhead">{p.bulletsHead}</b>}
-          <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+          {p.bullets.length > 0 && <ul>{p.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>}
           <a className="v2-proydet__back" href="#programa">← Volver a proyectos</a>
         </div>
       </div>

@@ -80,14 +80,16 @@ const PROYECTOS = [
   {
     slug: "proyecto-pensamiento",
     title: "Arroyo Valcheta",
-    img: PHOTOS.hands,
-    alt: "Compromiso comunitario",
-    short: "Fomentar la capacidad de cuestionar y proponer soluciones desde una ciudadanía ambientalmente comprometida.",
-    full: "Más allá del contenido científico, buscamos que cada estudiante termine el programa con herramientas para cuestionar y proponer: identificar problemas ambientales de su entorno y pensar posibles soluciones desde una ciudadanía comprometida.",
+    img: "assets/proyecto-arroyo-valcheta.jpg",
+    alt: "Monitoreo del arroyo Valcheta con estudiantes",
+    short: "Cuidar el arroyo Valcheta es cuidar el ambiente, la producción y la calidad de vida de toda la comunidad.",
+    full: "Contribuir al conocimiento y la valoración del arroyo Valcheta como un recurso socio-ambiental estratégico, mediante el trabajo articulado entre la universidad y la comunidad local. El proyecto integra investigación científica, monitoreo participativo y educación ambiental, generando información clave para el uso sustentable del recurso.",
+    bulletsHead: "Objetivos específicos",
     bullets: [
-      "Análisis de problemas ambientales locales.",
-      "Espacio para propuestas de los propios estudiantes.",
-      "Cierre del programa con una instancia reflexiva grupal.",
+      "Monitoreo físico-químico y biológico del agua (temperatura, pH, oxígeno disuelto, nutrientes).",
+      "Participación activa de estudiantes secundarios, universitarios y productores locales en el monitoreo ambiental.",
+      "Educación ambiental: fortalecer el vínculo entre la ciencia y la comunidad.",
+      "Promover el uso responsable y la conservación del arroyo Valcheta.",
     ],
   },
   {

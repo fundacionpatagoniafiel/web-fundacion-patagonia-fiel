@@ -799,7 +799,7 @@ body { margin: 0; }
   padding: 56px 48px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
 }
 .v2-proydet__body h3 {

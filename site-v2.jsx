@@ -680,6 +680,41 @@ function Galeria() {
     { src: "assets/galeria-lobos-marinos-ola.jpg", alt: "Lobos marinos junto al oleaje" },
     { src: "assets/galeria-pinguinos-pareja.jpg", alt: "Pareja de pingüinos" },
     { src: "assets/galeria-caracara.jpg", alt: "Caracara en la estepa" },
+    {
+      src: "assets/galeria-bosque-algas-1.jpg",
+      alt: "Bosque de algas bajo el agua",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-anemonas-colonia.jpg",
+      alt: "Colonia de anémonas marinas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-anemona-detalle.jpg",
+      alt: "Detalle de una anémona marina",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-bosque-algas-2.jpg",
+      alt: "Algas costeras bajo el agua",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-estrella-mar-1.jpg",
+      alt: "Estrella de mar entre rocas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-estrella-mar-2.jpg",
+      alt: "Estrella de mar entre rocas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-estrella-mar-3.jpg",
+      alt: "Estrella de mar entre rocas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
   ];
   const [index, setIndex] = useState(0);
   const prev = () => setIndex((i) => (i - 1 + photos.length) % photos.length);
@@ -734,7 +769,8 @@ function Contacto() {
           </p>
           <dl className="v2-contact__data">
             <div><dt>Sede</dt><dd>Gerónimo "Tinga" González 425<br/>San Antonio Oeste · Río Negro</dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:contacto@patagoniafiel.org">contacto@patagoniafiel.org</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:fundacionpatagoniafiel@gmail.com">fundacionpatagoniafiel@gmail.com</a></dd></div>
+            <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/fundacionpatagoniafiel/" target="_blank" rel="noopener noreferrer">@fundacionpatagoniafiel</a></dd></div>
             <div><dt>Personería</dt><dd>En trámite · Constituida 15·12·2025</dd></div>
           </dl>
         </div>

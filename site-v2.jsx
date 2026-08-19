@@ -22,13 +22,13 @@ const PHOTOS = {
   // Wide horizon
   horizon: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=2400&q=80&auto=format&fit=crop",
   // Team avatars (placeholder portraits)
-  p1: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p1: "assets/maxi-bertini.jpg",
   p2: "assets/dennis-landete.jpg",
   p3: "assets/juan-saad.jpg",
   p4: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop&crop=faces",
-  p5: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p5: "assets/marianela-gastaldi.jpg",
   p6: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format&fit=crop&crop=faces",
-  p7: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80&auto=format&fit=crop&crop=faces",
+  p7: "assets/agustina-tievas.jpg",
 };
 
 const PROYECTOS = [
@@ -418,18 +418,18 @@ function Equipo() {
       name: "Dennis N. Landete",
       role: "Secretario",
       img: PHOTOS.p2,
-      bio: "Secretario de la Fundación y Licenciado en Biología Marina, aporta su mirada científica sobre el ecosistema costero.",
+      bio: "Licenciado en Ciencias Biológicas y profesional de apoyo del CONICET, con especialización y experiencia en el trabajo de campo vinculado a la biodiversidad y la conservación de los ambientes marinos y costeros.",
     },
     {
       name: "Juan Francisco Saad",
       role: "Tesorero · Dr. en Cs. Biológicas",
       img: PHOTOS.p3,
-      bio: "Tesorero de la Fundación y responsable del programa educativo Bahía San Antonio bajo la lupa.",
+      bio: "Investigador del CONICET, profesor de la Facultad de Ciencias Marinas de la Universidad Nacional del Comahue y responsable del Laboratorio de Biodiversidad y Servicios Ecosistémicos. Especialista en oceanografía costera y ecología del plancton.",
     },
     {
       name: "María Libertad Chibli",
       role: "Vocal Titular",
-      img: PHOTOS.p4,
+      img: null,
       bio: "Licenciada en Realización Audiovisual y se encuentra finalizando la Licenciatura en Bibliotecología y Documentación.",
     },
     {
@@ -477,7 +477,7 @@ function Equipo() {
                 <div className="v2-team__photo">
                   <div className="v2-team__flip">
                     <div className="v2-team__face v2-team__face--front">
-                      <img src={p.img} alt={p.name} />
+                      {p.img ? <img src={p.img} alt={p.name} /> : <div className="v2-team__placeholder" />}
                     </div>
                     <div className="v2-team__face v2-team__face--back">
                       <p>{p.bio}</p>

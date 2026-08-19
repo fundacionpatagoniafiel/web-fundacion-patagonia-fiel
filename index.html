@@ -32,54 +32,16 @@
 <body>
 <div id="root"></div>
 
-<script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="site-v2.jsx"></script>
 <script type="text/babel">
-const TWEAK_DEFAULTS_V2 = /*EDITMODE-BEGIN*/{
-  "accent": "#c9a14a",
-  "displayFont": "'Cormorant Garamond', Georgia, serif",
-  "bodyFont": "'Manrope', system-ui, sans-serif",
-  "density": 1
-}/*EDITMODE-END*/;
+const TWEAK_DEFAULTS_V2 = {
+  accent: "#c9a14a",
+  displayFont: "'Cormorant Garamond', Georgia, serif",
+  bodyFont: "'Manrope', system-ui, sans-serif",
+  density: 1,
+};
 
-function App() {
-  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS_V2);
-  return (
-    <>
-      <SiteV2 tweaks={tweaks} />
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Identidad" />
-        <TweakColor label="Acento" value={tweaks.accent}
-          onChange={(v) => setTweak('accent', v)} />
-
-        <TweakSection label="Tipografía" />
-        <TweakRadio label="Display"
-          value={tweaks.displayFont}
-          options={[
-            { value: "'Cormorant Garamond', Georgia, serif", label: "Cormorant" },
-            { value: "'Fraunces', Georgia, serif", label: "Fraunces" },
-            { value: "'Inter Tight', system-ui, sans-serif", label: "Inter T." },
-          ]}
-          onChange={(v) => setTweak('displayFont', v)} />
-        <TweakRadio label="Cuerpo"
-          value={tweaks.bodyFont}
-          options={[
-            { value: "'Manrope', system-ui, sans-serif", label: "Manrope" },
-            { value: "'Inter Tight', system-ui, sans-serif", label: "Inter Tight" },
-          ]}
-          onChange={(v) => setTweak('bodyFont', v)} />
-
-        <TweakSection label="Densidad" />
-        <TweakSlider label="Espaciado"
-          min={0.85} max={1.15} step={0.05}
-          value={tweaks.density}
-          onChange={(v) => setTweak('density', v)} />
-      </TweaksPanel>
-    </>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(<SiteV2 tweaks={TWEAK_DEFAULTS_V2} />);
 </script>
 </body>
 </html>

@@ -391,7 +391,7 @@ body { margin: 0; }
   object-fit: cover;
   box-shadow: 0 24px 60px -28px rgba(12,34,64,0.45);
 }
-.v2-mani__photo--1 { width: 62%; height: 62%; top: 0; left: 0; }
+.v2-mani__photo--1 { width: 78%; height: 58%; top: 0; left: 0; }
 .v2-mani__photo--2 { width: 55%; height: 44%; bottom: 0; right: 0; border: 6px solid var(--accent); }
 .v2-mani__map { border: 6px solid var(--accent); background: var(--paper-warm); }
 .v2-mani__sig {

@@ -451,13 +451,6 @@ function Equipo() {
       bio: "Estudiante avanzada de la Licenciatura en Biología Marina.",
     },
   ];
-  const pageSize = 4;
-  const pages = [];
-  for (let i = 0; i < team.length; i += pageSize) pages.push(team.slice(i, i + pageSize));
-  const [page, setPage] = useState(0);
-  const prevPage = () => setPage((p) => (p - 1 + pages.length) % pages.length);
-  const nextPage = () => setPage((p) => (p + 1) % pages.length);
-
   return (
     <section className="v2-section" id="equipo">
       <div className="v2-team">
@@ -465,50 +458,26 @@ function Equipo() {
           <span className="v2-label">Consejo de Administración</span>
           <h3 className="v2-h3">Las personas detrás del proyecto.</h3>
         </div>
-        <div className="v2-team__paged">
-          {pages.length > 1 && (
-            <button className="v2-team__arrow v2-team__arrow--prev" onClick={prevPage} aria-label="Personas anteriores">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </button>
-          )}
-          <div className="v2-team__grid">
-            {pages[page].map((p) => (
-              <figure key={p.name} className="v2-team__card">
-                <div className="v2-team__photo">
-                  <div className="v2-team__flip">
-                    <div className="v2-team__face v2-team__face--front">
-                      {p.img ? <img src={p.img} alt={p.name} /> : <div className="v2-team__placeholder" />}
-                    </div>
-                    <div className="v2-team__face v2-team__face--back">
-                      <p>{p.bio}</p>
-                    </div>
+        <div className="v2-team__grid">
+          {team.map((p) => (
+            <figure key={p.name} className="v2-team__card">
+              <div className="v2-team__photo">
+                <div className="v2-team__flip">
+                  <div className="v2-team__face v2-team__face--front">
+                    {p.img ? <img src={p.img} alt={p.name} /> : <div className="v2-team__placeholder" />}
+                  </div>
+                  <div className="v2-team__face v2-team__face--back">
+                    <p>{p.bio}</p>
                   </div>
                 </div>
-                <figcaption>
-                  <b>{p.name}</b>
-                  <span>{p.role}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          {pages.length > 1 && (
-            <button className="v2-team__arrow v2-team__arrow--next" onClick={nextPage} aria-label="Más personas">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </button>
-          )}
+              </div>
+              <figcaption>
+                <b>{p.name}</b>
+                <span>{p.role}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
-        {pages.length > 1 && (
-          <div className="v2-team__dots">
-            {pages.map((_, i) => (
-              <button
-                key={i}
-                className={"v2-team__dot" + (i === page ? " v2-team__dot--active" : "")}
-                onClick={() => setPage(i)}
-                aria-label={`Ir a la página ${i + 1}`}
-              />
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );

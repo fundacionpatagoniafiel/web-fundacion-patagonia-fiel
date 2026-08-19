@@ -293,7 +293,7 @@ function Manifiesto() {
         >
           <iframe
             className="v2-mani__photo v2-mani__photo--1 v2-mani__map"
-            src="https://maps.google.com/maps?q=San+Antonio+Oeste,+R%C3%ADo+Negro,+Argentina&z=12&output=embed"
+            src="https://maps.google.com/maps?q=San+Antonio+Oeste,+R%C3%ADo+Negro,+Argentina&z=12&t=k&output=embed"
             title="Mapa de San Antonio Oeste"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

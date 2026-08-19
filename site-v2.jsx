@@ -107,6 +107,9 @@ const PROYECTOS = [
   },
 ];
 
+// Poné esto en true cuando tengamos noticias reales para mostrar.
+const SHOW_NOVEDADES = false;
+
 const NOVEDADES = [
   {
     slug: "noticia-1",
@@ -231,7 +234,7 @@ function V2Nav() {
             ))}
           </ul>
         </li>
-        <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>
+        {SHOW_NOVEDADES && <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>}
         <li><a href="#galeria" onClick={() => setOpen(false)}>Galería</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
       </ul>
@@ -837,8 +840,8 @@ function SiteV2({ tweaks }) {
         quote="Cada generación que crece comprendiendo su territorio aprende a cuidarlo. La educación ambiental no es un curso: es una forma de habitar el lugar."
         source="Programa Bahía San Antonio bajo la lupa"
       />
-      <Plan />
-      {NOVEDADES.map((n, i) => (
+      {SHOW_NOVEDADES && <Plan />}
+      {SHOW_NOVEDADES && NOVEDADES.map((n, i) => (
         <NoticiaDetalle key={n.slug} n={n} index={i} />
       ))}
       <Colaborar />

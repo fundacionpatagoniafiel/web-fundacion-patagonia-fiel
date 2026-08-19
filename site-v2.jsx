@@ -614,7 +614,7 @@ function Colaborar() {
         <div className="v2-section__head v2-section__head--light">
           <span className="v2-label v2-label--light">04 — Cómo colaborar</span>
           <h2 className="v2-h2 v2-h2--light">
-            La Patagonia se cuida <em>en compañía.</em>
+            La Patagonia se cuida <em>en comunidad.</em>
           </h2>
         </div>
         <div className="v2-ways">

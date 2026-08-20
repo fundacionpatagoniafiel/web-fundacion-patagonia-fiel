@@ -444,16 +444,16 @@ function Equipo() {
       bio: "Bióloga y Doctora en Ciencias Biológicas, investigadora del CONICET y docente de la Universidad Nacional del Comahue.",
     },
     {
-      name: "Camilo Juárez",
-      role: "Líder de redes de comunicación",
-      img: PHOTOS.p6,
-      bio: "Estudiante avanzado de la Licenciatura en Biología Marina.",
-    },
-    {
       name: "Agustina Tievas",
       role: "Líder de redes de comunicación",
       img: PHOTOS.p7,
       bio: "Estudiante avanzada de la Licenciatura en Biología Marina.",
+    },
+    {
+      name: "Camilo Juárez",
+      role: "Líder de redes de comunicación",
+      img: null,
+      bio: "Estudiante avanzado de la Licenciatura en Biología Marina.",
     },
   ];
   return (

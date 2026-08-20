@@ -771,9 +771,9 @@ function Contacto() {
           </p>
           <dl className="v2-contact__data">
             <div><dt>Sede</dt><dd>Gerónimo "Tinga" González 425<br/>San Antonio Oeste · Río Negro</dd></div>
+            <div><dt>Teléfono</dt><dd><a href="tel:+542920515587">2920 51-5587</a></dd></div>
             <div><dt>Email</dt><dd><a href="mailto:fundacionpatagoniafiel@gmail.com">fundacionpatagoniafiel@gmail.com</a></dd></div>
             <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/fundacionpatagoniafiel/" target="_blank" rel="noopener noreferrer">@fundacionpatagoniafiel</a></dd></div>
-            <div><dt>Personería</dt><dd>En trámite · Constituida 15·12·2025</dd></div>
           </dl>
         </div>
         <form className="v2-contact__form" onSubmit={(e) => e.preventDefault()}>

@@ -671,14 +671,44 @@ function Galeria() {
       credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
+      src: "assets/galeria-pinguinos-marea.jpg",
+      alt: "Pingüinos en una marea",
+      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    {
+      src: "assets/galeria-anemonas-colonia.jpg",
+      alt: "Colonia de anémonas marinas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
       src: "assets/galeria-ballena-cerca.jpg",
       alt: "Ballena nadando cerca de la superficie",
       credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
+      src: "assets/galeria-lobos-marinos-playa.jpg",
+      alt: "Familia de lobos marinos en la playa",
+      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    {
+      src: "assets/galeria-anemona-detalle.jpg",
+      alt: "Detalle de una anémona marina",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
       src: "assets/galeria-raya-fondo-marino.jpg",
       alt: "Raya nadando sobre el fondo marino",
       credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
+    },
+    {
+      src: "assets/galeria-pinguino-rocas.jpg",
+      alt: "Pingüino entre las rocas",
+      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    {
+      src: "assets/galeria-estrella-mar.jpg",
+      alt: "Estrella de mar entre rocas",
+      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
     },
     {
       src: "assets/galeria-bandada-aves-costa.jpg",

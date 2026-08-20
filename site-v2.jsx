@@ -53,6 +53,7 @@ const PROYECTOS = [
     title: "Canal del Indio",
     img: "assets/proyecto-canal-del-indio.jpg",
     alt: "Vista satelital del Canal del Indio",
+    detailMap: "https://maps.google.com/maps?q=Canal+del+Indio,+San+Antonio+Oeste,+R%C3%ADo+Negro,+Argentina&z=15&t=k&output=embed",
     short: "Cuidar a nuestro territorio es la mejor bienvenida a quienes nos visitan.",
     full: "Transformar el margen norte del Canal del Indio —hoy degradado por acumulación de residuos— en un paseo de salud activo y verde, de acceso libre para toda la comunidad. La acción de limpieza y puesta en valor se realizará cada año en noviembre–diciembre, y se consolidará como el gesto colectivo de la localidad hacia su territorio, como bienvenida a la temporada de aire libre y como símbolo de identidad y orgullo patagónico.",
     bulletsHead: "Pilares del proyecto",
@@ -535,7 +536,17 @@ function ProyectoDetalle({ p, index }) {
     <section className={"v2-section v2-proydet" + (index % 2 === 1 ? " v2-proydet--rev" : "")} id={p.slug}>
       <div className="v2-proydet__card">
         <div className="v2-proydet__photo">
-          <img src={p.img} alt={p.alt} />
+          {p.detailMap ? (
+            <iframe
+              className="v2-proydet__map"
+              src={p.detailMap}
+              title={`Mapa satelital — ${p.title}`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          ) : (
+            <img src={p.img} alt={p.alt} />
+          )}
           <span className="v2-proydet__num">{String(index + 1).padStart(2, "0")}</span>
         </div>
         <div className="v2-proydet__body">
@@ -619,7 +630,7 @@ function Colaborar() {
   ];
   return (
     <section className="v2-section v2-section--colab" id="colaborar">
-      <img className="v2-colab__bg" src={PHOTOS.mesa} alt="" />
+      <img className="v2-colab__bg" src="assets/patagonia-marea-verde.jpg" alt="" />
       <div className="v2-colab__veil" />
       <div className="v2-colab__inner">
         <div className="v2-section__head v2-section__head--light">
@@ -646,7 +657,7 @@ function Colaborar() {
         <div className="v2-donar" onClick={() => setShowDonar(false)}>
           <div className="v2-donar__card" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="v2-donar__close" onClick={() => setShowDonar(false)} aria-label="Cerrar">×</button>
-            <span className="v2-label">Donaciones particulares</span>
+            <span className="v2-label">Donaciones</span>
             <h3>Datos de la cuenta</h3>
             <dl className="v2-donar__data">
               {cuenta.map((c) => (
@@ -865,7 +876,7 @@ function SiteV2({ tweaks }) {
         <ProyectoDetalle key={p.slug} p={p} index={i} />
       ))}
       <PhotoQuote
-        src="assets/manifiesto-lobos-marinos-bn.jpg"
+        src="assets/patagonia-marea-verde.jpg"
         quote="Cada generación que crece comprendiendo su territorio aprende a cuidarlo. La educación ambiental no es un curso: es una forma de habitar el lugar."
         source="Programa Bahía San Antonio bajo la lupa"
       />

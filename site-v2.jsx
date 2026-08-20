@@ -53,7 +53,7 @@ const PROYECTOS = [
     title: "Canal del Indio",
     img: "assets/proyecto-canal-del-indio.jpg",
     alt: "Vista satelital del Canal del Indio",
-    detailMap: "https://maps.google.com/maps?q=Canal+del+Indio,+San+Antonio+Oeste,+R%C3%ADo+Negro,+Argentina&z=15&t=k&output=embed",
+    detailImg: "assets/proyecto-canal-del-indio-detalle.jpg",
     short: "Cuidar a nuestro territorio es la mejor bienvenida a quienes nos visitan.",
     full: "Transformar el margen norte del Canal del Indio —hoy degradado por acumulación de residuos— en un paseo de salud activo y verde, de acceso libre para toda la comunidad. La acción de limpieza y puesta en valor se realizará cada año en noviembre–diciembre, y se consolidará como el gesto colectivo de la localidad hacia su territorio, como bienvenida a la temporada de aire libre y como símbolo de identidad y orgullo patagónico.",
     bulletsHead: "Pilares del proyecto",
@@ -536,17 +536,7 @@ function ProyectoDetalle({ p, index }) {
     <section className={"v2-section v2-proydet" + (index % 2 === 1 ? " v2-proydet--rev" : "")} id={p.slug}>
       <div className="v2-proydet__card">
         <div className="v2-proydet__photo">
-          {p.detailMap ? (
-            <iframe
-              className="v2-proydet__map"
-              src={p.detailMap}
-              title={`Mapa satelital — ${p.title}`}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          ) : (
-            <img src={p.img} alt={p.alt} />
-          )}
+          <img src={p.detailImg || p.img} alt={p.alt} />
           <span className="v2-proydet__num">{String(index + 1).padStart(2, "0")}</span>
         </div>
         <div className="v2-proydet__body">

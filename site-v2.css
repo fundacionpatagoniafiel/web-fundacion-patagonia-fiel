@@ -641,6 +641,7 @@ body { margin: 0; }
   display: flex;
   align-items: flex-end;
   padding: 0 var(--pad-x) 64px;
+  margin-top: 48px;
   overflow: hidden;
 }
 .v2-qcover__img {

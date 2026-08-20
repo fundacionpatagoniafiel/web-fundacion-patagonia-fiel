@@ -990,7 +990,8 @@ body { margin: 0; }
   line-height: 1.6;
   flex: 1;
 }
-.v2-ways__card a {
+.v2-ways__card a,
+.v2-ways__link {
   color: var(--accent);
   font-weight: 600;
   font-size: 14px;
@@ -998,6 +999,70 @@ body { margin: 0; }
   border-top: 1px solid rgba(255,255,255,0.14);
   padding-top: 16px;
   margin-top: 4px;
+}
+.v2-ways__link {
+  background: none;
+  border-left: none; border-right: none; border-bottom: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── DONAR (modal) ── */
+.v2-donar {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(12, 34, 64, 0.6);
+  backdrop-filter: blur(4px);
+}
+.v2-donar__card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 40px 36px;
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,0.5);
+}
+.v2-donar__card h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy-deep);
+  margin: 8px 0 24px;
+}
+.v2-donar__close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--paper-warm);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.v2-donar__close:hover { background: var(--line); }
+.v2-donar__data { margin: 0; display: grid; gap: 18px; }
+.v2-donar__data dt {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+.v2-donar__data dd {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy-deep);
+  word-break: break-word;
 }
 
 /* ── GALERÍA ── */

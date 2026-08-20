@@ -235,6 +235,7 @@ function V2Nav() {
           </ul>
         </li>
         {SHOW_NOVEDADES && <li><a href="#plan" onClick={() => setOpen(false)}>Novedades</a></li>}
+        <li><a href="#colaborar" onClick={() => setOpen(false)}>Donaciones</a></li>
         <li><a href="#galeria" onClick={() => setOpen(false)}>Galería</a></li>
         <li><a className="v2-nav__cta" href="#contacto" onClick={() => setOpen(false)}>Contacto</a></li>
       </ul>
@@ -604,10 +605,17 @@ function NoticiaDetalle({ n, index }) {
 }
 
 function Colaborar() {
+  const [showDonar, setShowDonar] = useState(false);
   const ways = [
-    { h: "Aportes de empresas", p: "Sumate como aliado estratégico al plan trienal: tu aporte financia educación, saneamiento costero y monitoreo ambiental." },
-    { h: "Donaciones particulares", p: "Aportes de personas que quieren cooperar. Cada contribución se destina íntegramente al objeto fundacional." },
-    { h: "Cooperación institucional", p: "Vínculos con universidades, escuelas, organismos públicos y ONGs locales o internacionales para proyectos compartidos." },
+    { h: "Aportes de empresas", p: "Sumate como aliado estratégico al plan trienal: tu aporte financia educación, saneamiento costero y monitoreo ambiental.", action: "donar" },
+    { h: "Donaciones particulares", p: "Aportes de personas que quieren cooperar. Cada contribución se destina íntegramente al objeto fundacional.", action: "donar" },
+    { h: "Cooperación institucional", p: "Vínculos con universidades, escuelas, organismos públicos y ONGs locales o internacionales para proyectos compartidos.", action: "donar" },
+  ];
+  const cuenta = [
+    { label: "Alias", value: "patagoniafiel.fund" },
+    { label: "CBU", value: "0340252008122362345002" },
+    { label: "Cuenta", value: "CA $ 252-122362345-000" },
+    { label: "CUIT/CUIL", value: "30-71937050-7" },
   ];
   return (
     <section className="v2-section v2-section--colab" id="colaborar">
@@ -625,11 +633,32 @@ function Colaborar() {
             <div key={w.h} className="v2-ways__card">
               <h3>{w.h}</h3>
               <p>{w.p}</p>
-              <a href="#contacto">Contactar →</a>
+              {w.action === "donar" ? (
+                <button type="button" className="v2-ways__link" onClick={() => setShowDonar(true)}>Donar →</button>
+              ) : (
+                <a href="#contacto">Contactar →</a>
+              )}
             </div>
           ))}
         </div>
       </div>
+      {showDonar && (
+        <div className="v2-donar" onClick={() => setShowDonar(false)}>
+          <div className="v2-donar__card" onClick={(e) => e.stopPropagation()}>
+            <button type="button" className="v2-donar__close" onClick={() => setShowDonar(false)} aria-label="Cerrar">×</button>
+            <span className="v2-label">Donaciones particulares</span>
+            <h3>Datos de la cuenta</h3>
+            <dl className="v2-donar__data">
+              {cuenta.map((c) => (
+                <div key={c.label}>
+                  <dt>{c.label}</dt>
+                  <dd>{c.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

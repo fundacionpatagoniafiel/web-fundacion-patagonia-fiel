@@ -452,7 +452,7 @@ function Equipo() {
     {
       name: "Camilo Juárez",
       role: "Líder de redes de comunicación",
-      img: null,
+      img: "assets/camilo-juarez.jpg",
       bio: "Estudiante avanzado de la Licenciatura en Biología Marina.",
     },
   ];

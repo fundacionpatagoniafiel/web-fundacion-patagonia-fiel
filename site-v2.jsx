@@ -801,7 +801,7 @@ function Contacto() {
 function V2Footer() {
   return (
     <footer className="v2-footer">
-      <img className="v2-footer__bg" src={PHOTOS.horizon} alt="" />
+      <img className="v2-footer__bg" src="assets/patagonia-marea-verde.jpg" alt="" />
       <div className="v2-footer__veil" />
       <div className="v2-footer__inner">
         <div className="v2-footer__brand">
@@ -876,7 +876,7 @@ function SiteV2({ tweaks }) {
         <ProyectoDetalle key={p.slug} p={p} index={i} />
       ))}
       <PhotoQuote
-        src="assets/patagonia-marea-verde.jpg"
+        src="assets/manifiesto-lobos-marinos-bn.jpg"
         quote="Cada generación que crece comprendiendo su territorio aprende a cuidarlo. La educación ambiental no es un curso: es una forma de habitar el lugar."
         source="Programa Bahía San Antonio bajo la lupa"
       />

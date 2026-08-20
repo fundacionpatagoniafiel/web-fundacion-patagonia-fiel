@@ -191,7 +191,6 @@ function PhotoHero() {
       <div className="v2-hero__meta">
         <div><span>Constituida</span><b>15·12·2025</b></div>
         <div><span>Sede</span><b>San Antonio Oeste</b></div>
-        <div><span>Plan</span><b>Trienal 2026—2028</b></div>
       </div>
     </header>
   );
@@ -667,55 +666,24 @@ function Colaborar() {
 function Galeria() {
   const photos = [
     {
-      src: "assets/galeria-gaviotas-vuelo.jpg",
-      alt: "Gaviotas en vuelo",
-      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
-    },
-    { src: "assets/galeria-lobos-marinos-familia.jpg", alt: "Familia de lobos marinos en la playa" },
-    { src: "assets/galeria-pichon-pinguino.jpg", alt: "Pichón de pingüino" },
-    { src: "assets/galeria-pinguinos-marea.jpg", alt: "Pingüinos en la marea" },
-    { src: "assets/galeria-pinguino-magallanico.jpg", alt: "Pingüino magallánico" },
-    { src: "assets/galeria-lobo-marino-submarino.jpg", alt: "Lobo marino bajo el agua" },
-    { src: "assets/galeria-ballena-submarina.jpg", alt: "Ballena bajo el agua" },
-    { src: "assets/galeria-observacion-aves.jpg", alt: "Observación de aves en la costa" },
-    { src: "assets/galeria-avistaje-binoculares.jpg", alt: "Avistaje con binoculares" },
-    { src: "assets/galeria-lobos-marinos-ola.jpg", alt: "Lobos marinos junto al oleaje" },
-    { src: "assets/galeria-pinguinos-pareja.jpg", alt: "Pareja de pingüinos" },
-    { src: "assets/galeria-caracara.jpg", alt: "Caracara en la estepa" },
-    {
-      src: "assets/galeria-bosque-algas-1.jpg",
-      alt: "Bosque de algas bajo el agua",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+      src: "assets/galeria-ballena-vista-lejana.jpg",
+      alt: "Ballena vista desde el aire",
+      credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
-      src: "assets/galeria-anemonas-colonia.jpg",
-      alt: "Colonia de anémonas marinas",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+      src: "assets/galeria-ballena-cerca.jpg",
+      alt: "Ballena nadando cerca de la superficie",
+      credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
-      src: "assets/galeria-anemona-detalle.jpg",
-      alt: "Detalle de una anémona marina",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+      src: "assets/galeria-raya-fondo-marino.jpg",
+      alt: "Raya nadando sobre el fondo marino",
+      credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
-      src: "assets/galeria-bosque-algas-2.jpg",
-      alt: "Algas costeras bajo el agua",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
-    },
-    {
-      src: "assets/galeria-estrella-mar-1.jpg",
-      alt: "Estrella de mar entre rocas",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
-    },
-    {
-      src: "assets/galeria-estrella-mar-2.jpg",
-      alt: "Estrella de mar entre rocas",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
-    },
-    {
-      src: "assets/galeria-estrella-mar-3.jpg",
-      alt: "Estrella de mar entre rocas",
-      credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+      src: "assets/galeria-bandada-aves-costa.jpg",
+      alt: "Bandada de aves volando sobre la costa",
+      credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
   ];
   const [index, setIndex] = useState(0);

@@ -426,7 +426,7 @@ function Equipo() {
     },
     {
       name: "Juan Francisco Saad",
-      role: "Tesorero · Dr. en Cs. Biológicas",
+      role: "Tesorero",
       img: PHOTOS.p3,
       bio: "Investigador del CONICET, profesor de la Facultad de Ciencias Marinas de la Universidad Nacional del Comahue y responsable del Laboratorio de Biodiversidad y Servicios Ecosistémicos. Especialista en oceanografía costera y ecología del plancton.",
     },
@@ -438,19 +438,19 @@ function Equipo() {
     },
     {
       name: "Marianela Gastaldi",
-      role: "Colaboradora",
+      role: "Líder de investigación",
       img: PHOTOS.p5,
       bio: "Bióloga y Doctora en Ciencias Biológicas, investigadora del CONICET y docente de la Universidad Nacional del Comahue.",
     },
     {
       name: "Camilo Juárez",
-      role: "Estudiante · Colaborador",
+      role: "Líder de redes de comunicación",
       img: PHOTOS.p6,
       bio: "Estudiante avanzado de la Licenciatura en Biología Marina.",
     },
     {
       name: "Agustina Tievas",
-      role: "Estudiante · Colaboradora",
+      role: "Líder de redes de comunicación",
       img: PHOTOS.p7,
       bio: "Estudiante avanzada de la Licenciatura en Biología Marina.",
     },

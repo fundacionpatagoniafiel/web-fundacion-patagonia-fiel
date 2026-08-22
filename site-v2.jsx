@@ -433,7 +433,7 @@ function Equipo() {
     {
       name: "María Libertad Chibli",
       role: "Vocal Titular",
-      img: null,
+      img: "assets/maria-libertad-chibli.jpg",
       bio: "Licenciada en Realización Audiovisual y se encuentra finalizando la Licenciatura en Bibliotecología y Documentación.",
     },
     {

@@ -1295,13 +1295,18 @@ body { margin: 0; }
   .v2-nav__submenu {
     position: static;
     transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     box-shadow: none;
     background: none;
     padding: 0 0 0 16px;
     margin-top: 4px;
+  }
+  .v2-nav__links--open .v2-nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   .v2-nav__submenu a { padding: 6px 0; font-size: 13px; }
 

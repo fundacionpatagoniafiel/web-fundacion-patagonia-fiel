@@ -706,6 +706,11 @@ function Galeria() {
       credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
     },
     {
+      src: "assets/galeria-pinguino-pichon.jpg",
+      alt: "Pichón de pingüino",
+      credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    {
       src: "assets/galeria-estrella-mar.jpg",
       alt: "Estrella de mar entre rocas",
       credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },

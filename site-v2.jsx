@@ -691,11 +691,6 @@ function Galeria() {
       credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
-      src: "assets/galeria-lobos-marinos-costa.jpg",
-      alt: "Lobos marinos en la costa",
-      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
-    },
-    {
       src: "assets/galeria-lobos-marinos-playa.jpg",
       alt: "Familia de lobos marinos en la playa",
       credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
@@ -724,6 +719,11 @@ function Galeria() {
       src: "assets/galeria-pinguino-pichon.jpg",
       alt: "Pichón de pingüino",
       credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
+    },
+    {
+      src: "assets/galeria-lobos-marinos-costa.jpg",
+      alt: "Lobos marinos en la costa",
+      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
     },
     {
       src: "assets/galeria-estrella-mar.jpg",

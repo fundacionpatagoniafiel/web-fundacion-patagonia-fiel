@@ -676,6 +676,11 @@ function Galeria() {
       credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
     },
     {
+      src: "assets/galeria-guanaco-cria.jpg",
+      alt: "Guanaco con su cría",
+      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
+    },
+    {
       src: "assets/galeria-anemonas-colonia.jpg",
       alt: "Colonia de anémonas marinas",
       credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
@@ -686,6 +691,11 @@ function Galeria() {
       credit: { name: "Agustín Patocchi", url: "https://www.instagram.com/apatocchi/" },
     },
     {
+      src: "assets/galeria-lobos-marinos-costa.jpg",
+      alt: "Lobos marinos en la costa",
+      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
+    },
+    {
       src: "assets/galeria-lobos-marinos-playa.jpg",
       alt: "Familia de lobos marinos en la playa",
       credit: { name: "Agustina Tievas", url: "https://www.instagram.com/agus_tievas/" },
@@ -694,6 +704,11 @@ function Galeria() {
       src: "assets/galeria-anemona-detalle.jpg",
       alt: "Detalle de una anémona marina",
       credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-pinguino-orilla.jpg",
+      alt: "Pingüino en la orilla",
+      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
     },
     {
       src: "assets/galeria-raya-fondo-marino.jpg",
@@ -714,6 +729,11 @@ function Galeria() {
       src: "assets/galeria-estrella-mar.jpg",
       alt: "Estrella de mar entre rocas",
       credit: { name: "Camilo Juárez", url: "https://www.instagram.com/camilojuarezviecho22/" },
+    },
+    {
+      src: "assets/galeria-gaviotas-mar.jpg",
+      alt: "Gaviotas volando sobre el mar",
+      credit: { name: "Mía Jocou", url: "https://www.instagram.com/azulsalado.raw/" },
     },
     {
       src: "assets/galeria-bandada-aves-costa.jpg",

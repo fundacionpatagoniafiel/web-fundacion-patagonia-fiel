@@ -189,7 +189,6 @@ function PhotoHero() {
         </div>
       </div>
       <div className="v2-hero__meta">
-        <div><span>Constituida</span><b>15·12·2025</b></div>
         <div><span>Sede</span><b>San Antonio Oeste</b></div>
       </div>
     </header>

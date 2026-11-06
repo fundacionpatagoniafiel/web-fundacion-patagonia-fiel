@@ -415,7 +415,7 @@ function Equipo() {
       name: "Maximiliano Bertini",
       role: "Presidente",
       img: PHOTOS.p1,
-      bio: "Preside la Fundación Patagonia Fiel y lidera su vínculo con la comunidad de San Antonio Oeste.",
+      bio: "Es Presidente de la Fundación Patagonia Fiel y lidera su vínculo con la comunidad de San Antonio Oeste.",
     },
     {
       name: "Dennis N. Landete",
